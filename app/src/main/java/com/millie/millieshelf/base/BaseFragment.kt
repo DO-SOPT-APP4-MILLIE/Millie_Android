@@ -13,6 +13,8 @@ abstract class BaseFragment<T : ViewBinding> : Fragment() {
     val binding: T
         get() = requireNotNull(_binding) { getString(R.string.BINDING_ERROR) }
 
+    abstract fun getFragmentBinding(inflater: LayoutInflater, container: ViewGroup?): T
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -21,8 +23,6 @@ abstract class BaseFragment<T : ViewBinding> : Fragment() {
         _binding = getFragmentBinding(inflater, container)
         return binding.root
     }
-
-    abstract fun getFragmentBinding(inflater: LayoutInflater, container: ViewGroup?): T
 
     override fun onDestroyView() {
         _binding = null
