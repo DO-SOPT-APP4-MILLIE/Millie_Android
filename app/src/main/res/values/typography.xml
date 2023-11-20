@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.Millie" parent="">
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TitleBoldHeadline1" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_bold</item>
+        <item name="android:textSize">32sp</item>
+        <item name="lineHeight">51.2dp</item>
+    </style>
+
+    <style name="TitleBoldHeadline2" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">32dp</item>
+    </style>
+
+    <style name="TitleBoldHeadline3" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_bold</item>
+        <item name="android:textSize">19sp</item>
+        <item name="lineHeight">17dp</item>
+    </style>
+
+    <style name="TitleBoldHeadline5" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">25dp</item>
+    </style>
+
+    <style name="TitleBoldSubhead2" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="lineHeight">19dp</item>
+    </style>
+
+    <style name="TitleBoldSubhead4" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">22.4dp</item>
+    </style>
+
+    <style name="TitleBoldSubhead5" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">19.2dp</item>
+    </style>
+
+    <style name="TitleMedHeadline6" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_medium</item>
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">17dp</item>
+    </style>
+
+    <style name="TitleMedSubhead6" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">17dp</item>
+    </style>
+
+    <style name="TitleMedSubhead7" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_medium</item>
+        <item name="android:textSize">13sp</item>
+        <item name="lineHeight">17dp</item>
+    </style>
+
+    <style name="TitleMedSubhead8" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_medium</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">15dp</item>
+    </style>
+
+    <style name="BodyMedBody10" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_medium</item>
+        <item name="android:textSize">11sp</item>
+        <item name="lineHeight">17dp</item>
+    </style>
+
+    <style name="BodyMedBody11" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_medium</item>
+        <item name="android:textSize">9sp</item>
+        <item name="lineHeight">17dp</item>
+    </style>
+
+    <style name="BodyMedBody12" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_medium</item>
+        <item name="android:textSize">6sp</item>
+        <item name="lineHeight">14dp</item>
+    </style>
+
+    <style name="BodyRegBody1" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_regular</item>
+        <item name="android:textSize">19sp</item>
+        <item name="lineHeight">17dp</item>
+    </style>
+
+    <style name="BodyRegBody2" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">24dp</item>
+    </style>
+
+    <style name="BodyRegBody7" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_regular</item>
+        <item name="android:textSize">11sp</item>
+        <item name="lineHeight">17dp</item>
+    </style>
+
+    <style name="BodyRegBody8" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_regular</item>
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">14dp</item>
+    </style>
+
+    <style name="BodyRegBody9" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_regular</item>
+        <item name="android:textSize">8sp</item>
+        <item name="lineHeight">14dp</item>
+    </style>
+</resources>
