@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <include
-        android:id="@+id/content_today_title"
+        android:id="@+id/content_today_bookmark_title"
         layout="@layout/content_title_with_right_arrow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,7 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/content_today_title"
+        app:layout_constraintTop_toBottomOf="@id/content_today_bookmark_title"
         tools:listitem="@layout/item_today_bookmark_content" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
