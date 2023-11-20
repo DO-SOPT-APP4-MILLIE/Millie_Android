@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Millie_Android</string>
+
+    <string name="BINDING_ERROR">BINDING ERROR</string>
 </resources>
