@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Millie_Android</string>
 
-    <!--    icon_title-->
+    <!--icon_title-->
     <string name="BELL">bell</string>
+
+    <!--temp_message-->
+    <string name="TEMP">temp</string>
 </resources>
