@@ -1,7 +1,6 @@
 package com.millie.millieshelf.presentation.todayTop
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
@@ -23,26 +22,24 @@ class TodayTopContentAdapter(context: Context) : ListAdapter<TodayTopModel, View
     private val inflater by lazy { LayoutInflater.from(context) }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
-        when (viewType){
+        when (viewType) {
             BANNER -> {
                 val binding = ItemTodayImgBannerBinding.inflate(inflater, parent, false)
-                Log.e("TAG", "onCreateViewHolder: BANNER", )
                 TodayBannerViewHolder(binding)
             }
+
             BOOKMARK -> {
                 val binding = ItemTodayBookmarkBinding.inflate(inflater, parent, false)
-                Log.e("TAG", "onCreateViewHolder: BOOK", )
                 TodayBookmarkViewHolder(binding)
             }
+
             BEST -> {
                 val binding = ItemTodayBestBinding.inflate(inflater, parent, false)
-                Log.e("TAG", "onCreateViewHolder: Best", )
                 TodayBestViwHolder(binding)
             }
 
             else -> { // Attention
                 val binding = ItemTodayAttentionBinding.inflate(inflater, parent, false)
-                Log.e("TAG", "onCreateViewHolder: attt", )
                 TodayAttentionViewHolder(binding)
             }
         }
@@ -51,7 +48,7 @@ class TodayTopContentAdapter(context: Context) : ListAdapter<TodayTopModel, View
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = currentList[position]
 
-        when (holder){
+        when (holder) {
             is TodayBannerViewHolder -> holder.onBind(item as TodayTopModel.Banner)
             is TodayBookmarkViewHolder -> holder.onBind(item as TodayTopModel.Bookmark)
             is TodayBestViwHolder -> holder.onBind(item as TodayTopModel.Best)
