@@ -21,6 +21,7 @@ sealed class TodayTopModel {
 
     data class Attention(
         override val type: String,
-        val title: String
+        val title: String,
+        val attentionList: List<TodayAttentionModel>
     ) : TodayTopModel()
 }
