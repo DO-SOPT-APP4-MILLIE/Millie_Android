@@ -26,7 +26,6 @@ class TodayTopFragment : BaseFragment<FragmentTodayTopBinding>() {
 
         val todayTopContentAdapter = TodayTopContentAdapter(requireContext())
         binding.rvTodayTop.adapter = todayTopContentAdapter
-        //binding.rvTodayTop.layoutManager = ConstraintLayout()
 
         todayTopContentAdapter.submitList(viewModel.mockTodayList)
     }

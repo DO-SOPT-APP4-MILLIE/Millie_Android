@@ -25,23 +25,23 @@ class TodayTopContentAdapter(context: Context) : ListAdapter<TodayTopModel, View
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
         when (viewType){
             BANNER -> {
-                val binding = ItemTodayImgBannerBinding.inflate(inflater)
+                val binding = ItemTodayImgBannerBinding.inflate(inflater, parent, false)
                 Log.e("TAG", "onCreateViewHolder: BANNER", )
                 TodayBannerViewHolder(binding)
             }
             BOOKMARK -> {
-                val binding = ItemTodayBookmarkBinding.inflate(inflater)
+                val binding = ItemTodayBookmarkBinding.inflate(inflater, parent, false)
                 Log.e("TAG", "onCreateViewHolder: BOOK", )
                 TodayBookmarkViewHolder(binding)
             }
             BEST -> {
-                val binding = ItemTodayBestBinding.inflate(inflater)
+                val binding = ItemTodayBestBinding.inflate(inflater, parent, false)
                 Log.e("TAG", "onCreateViewHolder: Best", )
                 TodayBestViwHolder(binding)
             }
 
             else -> { // Attention
-                val binding = ItemTodayAttentionBinding.inflate(inflater)
+                val binding = ItemTodayAttentionBinding.inflate(inflater, parent, false)
                 Log.e("TAG", "onCreateViewHolder: attt", )
                 TodayAttentionViewHolder(binding)
             }
