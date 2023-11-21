@@ -4,9 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.viewModels
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.millie.millieshelf.base.BaseFragment
 import com.millie.millieshelf.databinding.FragmentTodayTopBinding
 

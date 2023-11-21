@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_today_bookmark_description"
+        android:id="@+id/tv_today_bookmark_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="@string/TEMP"
