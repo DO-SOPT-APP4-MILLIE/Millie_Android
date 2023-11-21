@@ -10,7 +10,7 @@ sealed class TodayTopModel {
     data class Bookmark(
         override val type: String,
         val title: String,
-        val buttonList: List<String>
+        val buttonList: List<TodayBookmarkModel>
     ) : TodayTopModel()
 
     data class Best(
