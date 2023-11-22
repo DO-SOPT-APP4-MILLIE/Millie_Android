@@ -7,6 +7,5 @@ class MillieApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         ApiFactory.retrofit = ApiFactory.getRetrofit(BuildConfig.MILLIE_BASE_URL)
-
     }
 }

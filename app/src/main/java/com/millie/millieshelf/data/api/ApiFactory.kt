@@ -9,6 +9,7 @@ object ApiFactory {
 
     lateinit var retrofit: Retrofit
 
+    @Synchronized
     fun getRetrofit(baseUrl: String): Retrofit {
         return Retrofit.Builder()
             .baseUrl(baseUrl)
@@ -17,4 +18,8 @@ object ApiFactory {
     }
 
     inline fun <reified T> create(): T = retrofit.create(T::class.java)
+}
+
+object ServicePool {
+    val bookService: MillieService by lazy { ApiFactory.create() }
 }
