@@ -24,7 +24,6 @@ class TodayTopFragment : BaseFragment<FragmentTodayTopBinding>() {
     private lateinit var bestSnapHelper: LinearSnapHelper
 
     private lateinit var attentionAdapter: TodayAttentionAdapter
-    private lateinit var attentionSnapHelper: PagerSnapHelper
 
     override fun getFragmentBinding(
         inflater: LayoutInflater,
@@ -60,9 +59,6 @@ class TodayTopFragment : BaseFragment<FragmentTodayTopBinding>() {
     private fun initAttentionAdapter(){
         attentionAdapter = TodayAttentionAdapter(requireContext())
         attentionAdapter.submitList(viewModel.mockTodayAttentionList)
-        attentionSnapHelper = PagerSnapHelper()
-
-        attentionSnapHelper.attachToRecyclerView(binding.rvTodayAttention)
         binding.rvTodayAttention.adapter = attentionAdapter
     }
 

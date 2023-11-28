@@ -5,7 +5,7 @@
     <item
         android:id="@+id/toolbar_bell"
         android:enabled="true"
-        android:icon="@drawable/ic_bell_temp_black_24"
+        android:icon="@drawable/ic_bell_with_count"
         android:title="@string/BELL"
         app:showAsAction="always" />
 
