@@ -9,12 +9,14 @@ import androidx.fragment.app.viewModels
 import com.millie.millieshelf.base.BaseFragment
 import com.millie.millieshelf.databinding.FragmentTodayTopBinding
 import com.millie.millieshelf.presentation.todayTop.attention.TodayAttentionAdapter
+import com.millie.millieshelf.presentation.todayTop.best.TodayBestAdapter
 import com.millie.millieshelf.presentation.todayTop.bookmark.TodayBookmarkAdapter
 
 class TodayTopFragment : BaseFragment<FragmentTodayTopBinding>() {
     private val viewModel by viewModels<TodayTopViewModel>()
     private lateinit var bookmarkAdapter: TodayBookmarkAdapter
-    lateinit var attentionAdapter: TodayAttentionAdapter
+    private lateinit var bestAdapter: TodayBestAdapter
+    private lateinit var attentionAdapter: TodayAttentionAdapter
 
     override fun getFragmentBinding(
         inflater: LayoutInflater,
@@ -28,6 +30,7 @@ class TodayTopFragment : BaseFragment<FragmentTodayTopBinding>() {
         super.onViewCreated(view, savedInstanceState)
 
         initBookmarkAdapter()
+        initBestAdapter()
         initAttentionAdapter()
     }
 
@@ -36,6 +39,12 @@ class TodayTopFragment : BaseFragment<FragmentTodayTopBinding>() {
         bookmarkAdapter.submitList(viewModel.mockTodayBookmarkList)
         binding.rvTodayBookmark.adapter = bookmarkAdapter
 
+    }
+
+    private fun initBestAdapter(){
+        bestAdapter = TodayBestAdapter(requireContext())
+        bestAdapter.submitList(viewModel.mockTodayBestList)
+        binding.rvTodayBest.adapter = bestAdapter
     }
 
     private fun initAttentionAdapter(){
