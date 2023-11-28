@@ -1,4 +1,4 @@
-package com.millie.millieshelf.presentation
+package com.millie.millieshelf.presentation.todaybottom
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
