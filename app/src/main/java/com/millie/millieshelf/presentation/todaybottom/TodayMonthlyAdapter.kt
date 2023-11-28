@@ -1,4 +1,4 @@
-package com.millie.millieshelf.presentation
+package com.millie.millieshelf.presentation.todaybottom
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
