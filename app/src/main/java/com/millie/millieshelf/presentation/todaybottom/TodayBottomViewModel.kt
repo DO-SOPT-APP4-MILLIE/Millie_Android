@@ -3,6 +3,7 @@ package com.millie.millieshelf.presentation.todaybottom
 import androidx.lifecycle.ViewModel
 import com.millie.millieshelf.R
 import com.millie.millieshelf.domain.entity.Book
+import com.millie.millieshelf.domain.entity.CategoryChip
 import com.millie.millieshelf.domain.entity.OriginalBook
 
 class TodayBottomViewModel : ViewModel() {
@@ -78,7 +79,14 @@ class TodayBottomViewModel : ViewModel() {
             null,
         ),
     )
-    var originalChipList: List<String> = listOf("인기", "정기구독", "소설", "SF", "로맨스", "연재 중")
+    var originalChipList: List<CategoryChip> = listOf(
+        CategoryChip("인기", true),
+        CategoryChip("정기구독", false),
+        CategoryChip("SF", false),
+        CategoryChip("로맨스", false),
+        CategoryChip("연재 중", false),
+    )
+
     var millieOriginalList: List<OriginalBook> = listOf(
         OriginalBook(
             "나는 왜 자꾸 내 탓을 할까",
@@ -104,5 +112,30 @@ class TodayBottomViewModel : ViewModel() {
             R.drawable.today_img_original_4,
             "진지한 짝사랑 이야기를 담은\n밀리 오리지널 로맨스",
         ),
+    )
+
+    val weeklyTasteChipList: List<CategoryChip> = listOf(
+        CategoryChip("트렌드", false),
+        CategoryChip("라이프", false),
+        CategoryChip("힐링", false),
+        CategoryChip("지적 교양", false),
+        CategoryChip("소설", true),
+
+    )
+
+    val weeklyTasteBookList: List<Book> = listOf(
+        Book(R.drawable.today_img_novel_1, "[독점] 이제 이혼합니다", "가키야 미우 지음  / 김윤경…", 73, 242),
+        Book(R.drawable.today_img_novel_2, "에밀리의 작은 부엌칼", "모리사와 아키오 지음 / …", 46, 204),
+        Book(R.drawable.today_img_novel_3, "오르트 구름 넘어", "탁경은", null, null),
+        Book(R.drawable.today_img_novel_4, "짱뚱이의 시골 생활 1", "오진희 글 / 신영식  그림", 50, 27),
+        Book(
+            R.drawable.today_img_novel_5,
+            "폭풍의 언덕 - 앤의서재\n여성작가 클래식 5",
+            "에밀리 브론테 지음  / 이신…",
+            null,
+            null,
+        ),
+        Book(R.drawable.today_img_novel_6, "섬에 있는 서점", "개브리얼 제빈 지음/ 엄일녀…", 61, 199),
+
     )
 }

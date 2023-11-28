@@ -6,9 +6,10 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.millie.millieshelf.R
 import com.millie.millieshelf.databinding.ItemOriginalChipBinding
+import com.millie.millieshelf.domain.entity.CategoryChip
 
-class TodayOriginalChipAdapter(private var chipList: List<String>) :
-    RecyclerView.Adapter<TodayOriginalChipAdapter.TodayOriginalChipViewHolder>() {
+class TodayChipAdapter(private var chipList: List<CategoryChip>) :
+    RecyclerView.Adapter<TodayChipAdapter.TodayOriginalChipViewHolder>() {
 
     inner class TodayOriginalChipViewHolder(private val binding: ItemOriginalChipBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -30,8 +31,8 @@ class TodayOriginalChipAdapter(private var chipList: List<String>) :
         holder: TodayOriginalChipViewHolder,
         position: Int,
     ) {
-        holder.chipText.text = chipList[position]
-        if (position == 0) {
+        holder.chipText.text = chipList[position].title
+        if (chipList[position].isSelected == true) {
             with(holder) {
                 chipText.setBackgroundResource(R.drawable.rec_black_radius_16)
                 chipText.setTextColor(ContextCompat.getColor(itemView.context, R.color.White))
