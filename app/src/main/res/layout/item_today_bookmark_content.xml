@@ -9,19 +9,22 @@
         android:id="@+id/ib_today_bookmark_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_today_bookmark_temp_black_24"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/img_bookmark_bg"
+        android:src="@drawable/ic_today_bookmark_thumbs_up"
         app:layout_constraintDimensionRatio="1"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_today_bookmark_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="@string/TEMP"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="@id/ib_today_bookmark_button"
         app:layout_constraintStart_toStartOf="@id/ib_today_bookmark_button"
-        app:layout_constraintTop_toBottomOf="@id/ib_today_bookmark_button" />
+        app:layout_constraintTop_toBottomOf="@id/ib_today_bookmark_button"
+        tools:text="@string/TEMP" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
