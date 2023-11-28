@@ -34,7 +34,7 @@
         android:layout_marginEnd="10dp"
         tools:text="MBC 드라마 연인 제…"
         android:textColor="@color/DarkGrey01"
-        style="bodyreg"
+        style="@style/BodyRegBody5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_monthly_title" />
 
@@ -58,9 +58,10 @@
             android:id="@+id/tv_monthly_plus_percent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="4dp"
             android:text="63% | 9분"
             android:gravity="center"
+            style="@style/BodyRegBody5"
             android:textColor="@color/DarkGrey01"
             app:layout_constraintBottom_toBottomOf="@id/iv_monthly_plus"
             app:layout_constraintStart_toEndOf="@id/iv_monthly_plus"

@@ -92,15 +92,65 @@
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/vp_original_book"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fillViewport="true"
-            android:paddingHorizontal="20dp"
             android:layout_marginTop="25dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:fillViewport="true"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/rcv_original_chip"
             app:layout_constraintTop_toBottomOf="@id/rcv_original_chip" />
+
+        <TextView
+            android:id="@+id/tv_today_bottom_sixth"
+            style="@style/TitleBoldHeadline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="41dp"
+            android:text="이번 주 취향별 추천 책"
+            android:textColor="@color/DarkGrey03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vp_original_book" />
+
+        <ImageView
+            android:id="@+id/iv_today_bottom_sixth"
+            android:layout_width="24dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="21dp"
+            android:src="@drawable/ic_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/tv_today_bottom_sixth"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_today_bottom_sixth" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_weekly_taste_chip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_today_bottom_sixth"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_original_chip" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_weekly_taste_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rcv_weekly_taste_chip"
+            app:spanCount="3"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_weekly_taste_book" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,8 +11,10 @@ import com.millie.millieshelf.databinding.FragmentTodayBottomBinding
 class TodayBottomFragment : BaseFragment<FragmentTodayBottomBinding>() {
     private val viewModel by activityViewModels<TodayBottomViewModel>()
     private var _todayMonthlyAdapter: TodayMonthlyAdapter? = null
-    private var _originalChipAdapter: TodayOriginalChipAdapter? = null
+    private var _originalChipAdapter: TodayChipAdapter? = null
     private var _originalBookAdapter: TodayOriginalBookAdapter? = null
+    private var _weeklyTasteChipAdapter: TodayChipAdapter? = null
+    private var _weeklyTasteBookAdapter: TodayWeeklyTasteAdapter? = null
 
     override fun getFragmentBinding(
         inflater: LayoutInflater,
@@ -23,6 +25,7 @@ class TodayBottomFragment : BaseFragment<FragmentTodayBottomBinding>() {
         super.onViewCreated(view, savedInstanceState)
         initMonthlyAdapter()
         initOriginalAdapter()
+        initWeeklyTastAdapter()
     }
 
     private fun initMonthlyAdapter() {
@@ -32,12 +35,22 @@ class TodayBottomFragment : BaseFragment<FragmentTodayBottomBinding>() {
     }
 
     private fun initOriginalAdapter() {
-        _originalChipAdapter = TodayOriginalChipAdapter(viewModel.originalChipList)
+        // TODO  viewPager 옆페이지 보이게끔 수정해야함
+        _originalChipAdapter = TodayChipAdapter(viewModel.originalChipList)
         _originalBookAdapter = TodayOriginalBookAdapter(viewModel.millieOriginalList)
         with(binding) {
             rcvOriginalChip.adapter = _originalChipAdapter
             vpOriginalBook.adapter = _originalBookAdapter
             vpOriginalBook.isNestedScrollingEnabled = false
+        }
+    }
+
+    private fun initWeeklyTastAdapter() {
+        _weeklyTasteChipAdapter = TodayChipAdapter(viewModel.weeklyTasteChipList)
+        _weeklyTasteBookAdapter = TodayWeeklyTasteAdapter(viewModel.weeklyTasteBookList)
+        with(binding) {
+            rcvWeeklyTasteChip.adapter = _weeklyTasteChipAdapter
+            rcvWeeklyTasteBook.adapter = _weeklyTasteBookAdapter
         }
     }
 }
