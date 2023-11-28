@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/White"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true"
+    app:strokeColor="@android:color/transparent"
+    android:background="@drawable/rec_white_radius_12"
+    android:layout_marginEnd="12dp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+
+        >
+
+        <TextView
+            android:id="@+id/tv_original_book_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="나는 왜 자꾸 내 탓을 할까"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_original_book_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="허규형"
+            android:textColor="@color/DarkGrey01"
+            app:layout_constraintEnd_toEndOf="@id/tv_original_book_title"
+            app:layout_constraintStart_toStartOf="@id/tv_original_book_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_original_book_title" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_original_book_author">
+
+            <ImageView
+                android:id="@+id/iv_original_book_thumbnail"
+                android:layout_width="119dp"
+                android:layout_height="167dp"
+                android:layout_gravity="center"
+                android:src="@drawable/today_img_original_1" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_gravity="center|bottom"
+                android:layout_marginHorizontal="12dp"
+                android:background="@drawable/today_img_gradation_1"
+                android:paddingVertical="17dp"
+                android:paddingStart="72dp"
+                android:paddingEnd="36dp">
+
+                <TextView
+                    android:id="@+id/tv_original_book_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="오늘을 잘살고 싶은\n우리를 위한 심리 필독서"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
