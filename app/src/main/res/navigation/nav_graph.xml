@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.millie.millieshelf.presentation.TodayBottomFragment"
+        android:name="com.millie.millieshelf.presentation.todaybottom.TodayBottomFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_today_bottom">
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.millie.millieshelf.presentation.TodayBottomFragment"
+        android:name="com.millie.millieshelf.presentation.todaybottom.TodayBottomFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_today_bottom">
 
