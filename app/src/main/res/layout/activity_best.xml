@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Best.BestActivity">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_best_back"
+        android:layout_marginTop="61dp"
+        android:layout_marginStart="17dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_best"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="지금! 서점 베스트"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginTop="61dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_like"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_best_like"
+        android:layout_marginTop="61dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp" />
+
+    <View
+        android:background="#DFDFDF"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_best"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chip_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        app:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/tv_best"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="종합"
+            android:layout_marginEnd="10dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_trend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="트렌드"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_life"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="라이프"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_healing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="힐링"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_intellectual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="지적교양"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_novel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="소설"
+            android:layout_marginStart="10dp" />
+    </com.google.android.material.chip.ChipGroup>
+
+
+    <TextView
+        android:id="@+id/tv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="서점 3사 100위 내, 70권을 밀리에서 만나보세요."
+        android:textColor="#6F6F6F"
+        android:textSize="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/chip_group"
+        app:layout_constraintStart_toStartOf="@id/chip_group" />
+
+    <View
+        android:background="#DFDFDF"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="27dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_detail"/>
+
+    <TextView
+        android:id="@+id/tv_booknumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="218dp"
+        android:text="총 10권"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/iv_other_book"
+        app:layout_constraintTop_toBottomOf="@id/tv_detail" />
+
+    <ImageView
+        android:id="@+id/iv_book"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_best_other_book"
+        android:layout_marginTop="51dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="22dp" />
+    <ImageView
+        android:id="@+id/iv_other_book"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_best_book"
+        android:layout_marginTop="51dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="46dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_books"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/iv_other_book"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_book" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
