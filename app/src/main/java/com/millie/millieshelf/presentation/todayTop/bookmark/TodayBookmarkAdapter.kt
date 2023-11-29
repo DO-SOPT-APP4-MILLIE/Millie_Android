@@ -11,7 +11,10 @@ import com.millie.millieshelf.util.ItemDiffCallback
 
 class TodayBookmarkAdapter(context: Context) :
     ListAdapter<TodayBookmarkModel, TodayBookmarkContentViewHolder>(
-        TodayTopDiffCallback
+        ItemDiffCallback<TodayBookmarkModel>(
+            onContentsTheSame = {old, new -> old == new},
+            onItemsTheSame = {old, new -> old.title == new.title}
+        )
     ) {
     private val inflater by lazy { LayoutInflater.from(context) }
 
@@ -28,12 +31,4 @@ class TodayBookmarkAdapter(context: Context) :
     }
 
     override fun getItemCount() = currentList.size
-
-    companion object {
-        private val TodayTopDiffCallback =
-            ItemDiffCallback<TodayBookmarkModel>(
-                onItemsTheSame = { old, new -> old.title == new.title },
-                onContentsTheSame = { old, new -> old == new }
-            )
-    }
 }

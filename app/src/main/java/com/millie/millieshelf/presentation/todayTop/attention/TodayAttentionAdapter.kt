@@ -10,7 +10,10 @@ import com.millie.millieshelf.util.ItemDiffCallback
 
 class TodayAttentionAdapter(context: Context) :
     ListAdapter<TodayAttentionModel, TodayAttentionContentViewHolder>(
-        TodayTopDiffCallback
+        ItemDiffCallback<TodayAttentionModel>(
+            onItemsTheSame = { old, new -> old.id == new.id },
+            onContentsTheSame = { old, new -> old == new }
+        )
     ) {
     private val inflater by lazy { LayoutInflater.from(context) }
 
@@ -27,12 +30,4 @@ class TodayAttentionAdapter(context: Context) :
     }
 
     override fun getItemCount() = currentList.size
-
-    companion object {
-        private val TodayTopDiffCallback =
-            ItemDiffCallback<TodayAttentionModel>(
-                onItemsTheSame = { old, new -> old.id == new.id },
-                onContentsTheSame = { old, new -> old == new }
-            )
-    }
 }

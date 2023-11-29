@@ -5,12 +5,16 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import com.millie.millieshelf.databinding.ItemTodayBestContentBinding
+import com.millie.millieshelf.model.TodayBookmarkModel
 import com.millie.millieshelf.model.response.TodayBest
 import com.millie.millieshelf.util.ItemDiffCallback
 
 class TodayBestAdapter(context: Context) :
     ListAdapter<TodayBest.Data, TodayBestViewHolder>(
-        TodayBestDiffCallback
+        ItemDiffCallback<TodayBest.Data>(
+            onContentsTheSame = {old, new -> old == new},
+            onItemsTheSame = {old, new -> old.id == new.id}
+        )
     ) {
     private val inflater by lazy { LayoutInflater.from(context) }
 
@@ -24,13 +28,4 @@ class TodayBestAdapter(context: Context) :
     }
 
     override fun getItemCount(): Int = currentList.size
-
-
-    companion object {
-        private val TodayBestDiffCallback =
-            ItemDiffCallback<TodayBest.Data>(
-                onItemsTheSame = { old, new -> old.id == new.id },
-                onContentsTheSame = { old, new -> old == new }
-            )
-    }
 }
