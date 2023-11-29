@@ -15,6 +15,7 @@ class TodayBottomFragment : BaseFragment<FragmentTodayBottomBinding>() {
     private var _originalBookAdapter: TodayOriginalBookAdapter? = null
     private var _weeklyTasteChipAdapter: TodayChipAdapter? = null
     private var _weeklyTasteBookAdapter: TodayWeeklyTasteAdapter? = null
+    private var _footerAdapter: TodayFooterAdapter? = null
 
     override fun getFragmentBinding(
         inflater: LayoutInflater,
@@ -26,6 +27,7 @@ class TodayBottomFragment : BaseFragment<FragmentTodayBottomBinding>() {
         initMonthlyAdapter()
         initOriginalAdapter()
         initWeeklyTastAdapter()
+        initFooterAdapter()
     }
 
     private fun initMonthlyAdapter() {
@@ -52,5 +54,10 @@ class TodayBottomFragment : BaseFragment<FragmentTodayBottomBinding>() {
             rcvWeeklyTasteChip.adapter = _weeklyTasteChipAdapter
             rcvWeeklyTasteBook.adapter = _weeklyTasteBookAdapter
         }
+    }
+
+    private fun initFooterAdapter() {
+        _footerAdapter = TodayFooterAdapter(viewModel.footerInfoList)
+        binding.rcvTodayFooter.adapter = _footerAdapter
     }
 }

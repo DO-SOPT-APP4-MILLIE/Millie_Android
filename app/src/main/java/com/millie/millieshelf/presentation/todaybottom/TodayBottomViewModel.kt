@@ -138,4 +138,18 @@ class TodayBottomViewModel : ViewModel() {
         Book(R.drawable.today_img_novel_6, "섬에 있는 서점", "개브리얼 제빈 지음/ 엄일녀…", 61, 199),
 
     )
+
+    val footerInfoList: List<String> = listOf(
+        "이용약관",
+        "환불신청",
+        "뷰어 다운로드",
+        "개인정보처리방침",
+        "B2B 문의",
+        "저작권/도서오류신고",
+        "청소년보호정책",
+        "콘텐츠제휴문의",
+        "종료 예정 도서",
+        "회사 소개",
+        "고객센터",
+    )
 }
