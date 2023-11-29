@@ -1,7 +1,6 @@
-package com.millie.millieshelf.presentation.todayTop.bookmark
+package com.millie.millieshelf.presentation.today.bookmark
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
@@ -12,8 +11,8 @@ import com.millie.millieshelf.util.ItemDiffCallback
 class TodayBookmarkAdapter(context: Context) :
     ListAdapter<TodayBookmarkModel, TodayBookmarkContentViewHolder>(
         ItemDiffCallback<TodayBookmarkModel>(
-            onContentsTheSame = {old, new -> old == new},
-            onItemsTheSame = {old, new -> old.title == new.title}
+            onContentsTheSame = { old, new -> old == new },
+            onItemsTheSame = { old, new -> old.title == new.title }
         )
     ) {
     private val inflater by lazy { LayoutInflater.from(context) }

@@ -1,4 +1,4 @@
-package com.millie.millieshelf.presentation.todaybottom
+package com.millie.millieshelf.presentation.today
 
 import android.animation.ObjectAnimator
 import android.os.Bundle
@@ -26,10 +26,10 @@ class TodayActivity : AppCompatActivity() {
     private fun initBottomNavigation() {
         binding.bnvToday.selectedItemId = R.id.menu_feed
         supportFragmentManager.findFragmentById(R.id.fcv_today)
-            ?: navigateTo<TodayBottomFragment>()
+            ?: navigateTo<TodayFragment>()
         binding.bnvToday.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.menu_feed -> navigateTo<TodayBottomFragment>()
+                R.id.menu_feed -> navigateTo<TodayFragment>()
             }
             true
         }
