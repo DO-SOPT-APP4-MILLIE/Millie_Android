@@ -9,6 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/DarkGrey01"
         tools:context=".presentation.todaybottom.TodayActivity">
 
         <androidx.fragment.app.FragmentContainerView
@@ -20,17 +21,54 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_today_bottom"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_main_fab_container"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center|bottom"
-            android:contentDescription="@null"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="77dp"
+            android:background="@drawable/rec_white_radius_25"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_audio_fill"
+                app:backgroundTint="@color/White"
+                app:elevation="0dp"
+                app:fabCustomSize="1dp"
+                app:fabSize="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:maxImageSize="24dp"
+                app:rippleColor="@android:color/transparent" />
+
+
+            <TextView
+                android:id="@+id/tv_fab_audio"
+                style="@style/BodyRegBody2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오디오북"
+                app:layout_constraintBottom_toBottomOf="@id/fab_audio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/fab_audio"
+                app:layout_constraintTop_toTopOf="@id/fab_audio" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/tv_fab_audio"
+                app:layout_constraintStart_toEndOf="@id/tv_fab_audio"
+                app:layout_constraintTop_toTopOf="@id/tv_fab_audio" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bnv_today"
@@ -51,12 +89,15 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cl_main_fab_container"
+        android:id="@+id/cl_main_fab"
         android:layout_width="81dp"
         android:layout_height="81dp"
         android:layout_gravity="bottom|center"
         android:layout_marginBottom="-10dp"
-        android:background="@drawable/ic_fab">
+        android:background="@drawable/ic_fab"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_main"
