@@ -2,8 +2,10 @@
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingEnd="11dp"
+    >
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
@@ -13,11 +15,12 @@
         app:cardElevation="5dp"
         app:cardUseCompatPadding="true"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:strokeColor="@android:color/transparent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:paddingBottom="12dp">
 
@@ -25,7 +28,7 @@
                 android:id="@+id/tv_original_book_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="24dp"
                 style="@style/TitleBoldSubhead2"
                 android:textColor="@color/DarkGrey03"
                 android:text="나는 왜 자꾸 내 탓을 할까"
@@ -57,6 +60,7 @@
                     android:id="@+id/iv_original_book_thumbnail"
                     android:layout_width="119dp"
                     android:layout_height="167dp"
+                    android:layout_marginBottom="30dp"
                     android:layout_gravity="center"
                     android:src="@drawable/today_img_original_1" />
 

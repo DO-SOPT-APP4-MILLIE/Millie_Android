@@ -9,7 +9,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/DarkGrey01"
         tools:context=".presentation.todaybottom.TodayActivity">
 
         <androidx.fragment.app.FragmentContainerView
@@ -23,12 +22,12 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_fab_audiobook"
-            android:visibility="invisible"
             android:layout_width="120dp"
             android:layout_height="40dp"
             android:layout_gravity="bottom|center"
             android:layout_marginBottom="77dp"
             android:background="@drawable/rec_white_radius_25"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -73,12 +72,12 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_fab_millieroad"
-            android:visibility="invisible"
             android:layout_width="120dp"
             android:layout_height="40dp"
             android:layout_gravity="bottom|center"
             android:layout_marginBottom="8dp"
             android:background="@drawable/rec_white_radius_25"
+            android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@id/cl_fab_audiobook"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -123,12 +122,12 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_fab_story"
-            android:visibility="invisible"
             android:layout_width="120dp"
             android:layout_height="40dp"
             android:layout_gravity="bottom|center"
             android:layout_marginBottom="8dp"
             android:background="@drawable/rec_white_radius_25"
+            android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@id/cl_fab_millieroad"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -171,7 +170,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bnv_today"
             style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
@@ -194,10 +192,10 @@
         android:id="@+id/cl_main_fab"
         android:layout_width="81dp"
         android:layout_height="81dp"
-        android:clickable="true"
         android:layout_gravity="bottom|center"
         android:layout_marginBottom="-10dp"
         android:background="@drawable/ic_fab"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -211,13 +209,14 @@
             app:borderWidth="0dp"
             app:elevation="0dp"
             app:fabCustomSize="55dp"
-            app:pressedTranslationZ="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:pressedTranslationZ="0dp"
             app:rippleColor="@android:color/transparent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

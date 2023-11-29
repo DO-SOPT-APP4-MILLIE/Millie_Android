@@ -90,16 +90,17 @@
             tools:itemCount="6"
             tools:listitem="@layout/item_original_chip" />
 
-        <androidx.viewpager2.widget.ViewPager2
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/vp_original_book"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:fillViewport="true"
+            android:layout_marginStart="24dp"
             android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="@id/rcv_original_chip"
+            tools:listitem="@layout/item_original_book"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rcv_original_chip" />
 
         <TextView

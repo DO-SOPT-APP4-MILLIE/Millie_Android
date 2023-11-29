@@ -82,6 +82,7 @@ class TodayBottomViewModel : ViewModel() {
     var originalChipList: List<CategoryChip> = listOf(
         CategoryChip("인기", true),
         CategoryChip("정기구독", false),
+        CategoryChip("소설", false),
         CategoryChip("SF", false),
         CategoryChip("로맨스", false),
         CategoryChip("연재 중", false),

@@ -24,9 +24,13 @@ class TodayBottomFragment : BaseFragment<FragmentTodayBottomBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setInitAdapter()
+    }
+
+    private fun setInitAdapter() {
         initMonthlyAdapter()
         initOriginalAdapter()
-        initWeeklyTastAdapter()
+        initWeeklyTasteAdapter()
         initFooterAdapter()
     }
 
@@ -37,17 +41,15 @@ class TodayBottomFragment : BaseFragment<FragmentTodayBottomBinding>() {
     }
 
     private fun initOriginalAdapter() {
-        // TODO  viewPager 옆페이지 보이게끔 수정해야함
         _originalChipAdapter = TodayChipAdapter(viewModel.originalChipList)
         _originalBookAdapter = TodayOriginalBookAdapter(viewModel.millieOriginalList)
         with(binding) {
             rcvOriginalChip.adapter = _originalChipAdapter
             vpOriginalBook.adapter = _originalBookAdapter
-            vpOriginalBook.isNestedScrollingEnabled = false
         }
     }
 
-    private fun initWeeklyTastAdapter() {
+    private fun initWeeklyTasteAdapter() {
         _weeklyTasteChipAdapter = TodayChipAdapter(viewModel.weeklyTasteChipList)
         _weeklyTasteBookAdapter = TodayWeeklyTasteAdapter(viewModel.weeklyTasteBookList)
         with(binding) {
