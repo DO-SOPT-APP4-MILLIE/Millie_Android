@@ -22,8 +22,8 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cl_main_fab_container"
-            android:layout_width="wrap_content"
+            android:id="@+id/cl_fab_audiobook"
+            android:layout_width="120dp"
             android:layout_height="40dp"
             android:layout_gravity="bottom|center"
             android:layout_marginBottom="77dp"
@@ -42,7 +42,7 @@
                 app:backgroundTint="@color/White"
                 app:elevation="0dp"
                 app:fabCustomSize="1dp"
-                app:fabSize="normal"
+                app:fabSize="mini"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -69,6 +69,105 @@
                 app:layout_constraintTop_toTopOf="@id/tv_fab_audio" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_fab_millieroad"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rec_white_radius_25"
+            app:layout_constraintBottom_toTopOf="@id/cl_fab_audiobook"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_millieroad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_books"
+                app:backgroundTint="@color/White"
+                app:elevation="0dp"
+                app:fabCustomSize="1dp"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:maxImageSize="24dp"
+                app:rippleColor="@android:color/transparent" />
+
+
+            <TextView
+                android:id="@+id/tv_fab_millieroad"
+                style="@style/BodyRegBody2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="밀리로드"
+                app:layout_constraintBottom_toBottomOf="@id/fab_millieroad"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/fab_millieroad"
+                app:layout_constraintTop_toTopOf="@id/fab_millieroad" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/tv_fab_millieroad"
+                app:layout_constraintStart_toEndOf="@id/tv_fab_millieroad"
+                app:layout_constraintTop_toTopOf="@id/tv_fab_millieroad" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_fab_story"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rec_white_radius_25"
+            app:layout_constraintBottom_toTopOf="@id/cl_fab_millieroad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_story"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_book"
+                app:backgroundTint="@color/White"
+                app:elevation="0dp"
+                app:fabCustomSize="1dp"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:maxImageSize="24dp"
+                app:rippleColor="@android:color/transparent" />
+
+
+            <TextView
+                android:id="@+id/tv_fab_story"
+                style="@style/BodyRegBody2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="스토리"
+                app:layout_constraintBottom_toBottomOf="@id/fab_story"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/fab_story"
+                app:layout_constraintTop_toTopOf="@id/fab_story" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/tv_fab_story"
+                app:layout_constraintStart_toEndOf="@id/tv_fab_story"
+                app:layout_constraintTop_toTopOf="@id/tv_fab_story" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bnv_today"
@@ -108,6 +207,7 @@
             app:borderWidth="0dp"
             app:elevation="0dp"
             app:fabCustomSize="55dp"
+            app:pressedTranslationZ="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
