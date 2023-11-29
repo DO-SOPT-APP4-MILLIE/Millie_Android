@@ -23,6 +23,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_fab_audiobook"
+            android:visibility="invisible"
             android:layout_width="120dp"
             android:layout_height="40dp"
             android:layout_gravity="bottom|center"
@@ -72,6 +73,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_fab_millieroad"
+            android:visibility="invisible"
             android:layout_width="120dp"
             android:layout_height="40dp"
             android:layout_gravity="bottom|center"
@@ -121,6 +123,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_fab_story"
+            android:visibility="invisible"
             android:layout_width="120dp"
             android:layout_height="40dp"
             android:layout_gravity="bottom|center"
@@ -191,6 +194,7 @@
         android:id="@+id/cl_main_fab"
         android:layout_width="81dp"
         android:layout_height="81dp"
+        android:clickable="true"
         android:layout_gravity="bottom|center"
         android:layout_marginBottom="-10dp"
         android:background="@drawable/ic_fab"
