@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="36dp"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/tv_today_best_rank"
+        style="@style/TitleMedSubhead6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_today_best_book"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/tv_today_best_rank_change"
+        style="@style/TitleMedSubhead8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="@id/tv_today_best_rank"
+        app:layout_constraintStart_toStartOf="@id/tv_today_best_rank"
+        app:layout_constraintTop_toBottomOf="@id/tv_today_best_rank" />
+
+    <ImageView
+        android:id="@+id/iv_today_best_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:src="@drawable/iv_today_best_img"
+        app:layout_constraintStart_toEndOf="@id/tv_today_best_rank"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_today_best_book_name"
+        style="@style/TitleMedSubhead8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toEndOf="@id/iv_today_best_book"
+        app:layout_constraintTop_toTopOf="@id/iv_today_best_book"
+        tools:text="트렌드 코리아 2024" />
+
+    <TextView
+        android:id="@+id/tv_today_best_book_author"
+        style="@style/BodyRegBody8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tv_today_best_book_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_today_best_book_name"
+        tools:text="김난도" />
+
+    <ImageView
+        android:id="@+id/iv_today_best_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_wandok_line_14"
+        app:layout_constraintStart_toStartOf="@id/tv_today_best_book_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_today_best_book_author" />
+
+    <TextView
+        android:id="@+id/tv_today_best_book_completion_rate"
+        style="@style/BodyRegBody8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/iv_today_best_icon"
+        app:layout_constraintStart_toEndOf="@id/iv_today_best_icon"
+        app:layout_constraintTop_toTopOf="@id/iv_today_best_icon"
+        tools:text="42% | 134분" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
