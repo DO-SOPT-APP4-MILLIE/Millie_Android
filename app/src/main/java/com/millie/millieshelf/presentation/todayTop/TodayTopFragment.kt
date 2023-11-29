@@ -1,15 +1,11 @@
 package com.millie.millieshelf.presentation.todayTop
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearSnapHelper
-import androidx.recyclerview.widget.PagerSnapHelper
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.SnapHelper
 import com.millie.millieshelf.base.BaseFragment
 import com.millie.millieshelf.databinding.FragmentTodayTopBinding
 import com.millie.millieshelf.presentation.todayTop.attention.TodayAttentionAdapter
@@ -22,7 +18,6 @@ class TodayTopFragment : BaseFragment<FragmentTodayTopBinding>() {
     private lateinit var bookmarkAdapter: TodayBookmarkAdapter
     private lateinit var bestAdapter: TodayBestAdapter
     private lateinit var bestSnapHelper: LinearSnapHelper
-
     private lateinit var attentionAdapter: TodayAttentionAdapter
 
     override fun getFragmentBinding(
@@ -41,13 +36,13 @@ class TodayTopFragment : BaseFragment<FragmentTodayTopBinding>() {
         initAttentionAdapter()
     }
 
-    private fun initBookmarkAdapter(){
+    private fun initBookmarkAdapter() {
         bookmarkAdapter = TodayBookmarkAdapter(requireContext())
         bookmarkAdapter.submitList(viewModel.mockTodayBookmarkList)
         binding.rvTodayBookmark.adapter = bookmarkAdapter
     }
 
-    private fun initBestAdapter(){
+    private fun initBestAdapter() {
         bestAdapter = TodayBestAdapter(requireContext())
         bestAdapter.submitList(viewModel.mockTodayBestList)
 
@@ -56,7 +51,7 @@ class TodayTopFragment : BaseFragment<FragmentTodayTopBinding>() {
         binding.rvTodayBest.adapter = bestAdapter
     }
 
-    private fun initAttentionAdapter(){
+    private fun initAttentionAdapter() {
         attentionAdapter = TodayAttentionAdapter(requireContext())
         attentionAdapter.submitList(viewModel.mockTodayAttentionList)
         binding.rvTodayAttention.adapter = attentionAdapter
