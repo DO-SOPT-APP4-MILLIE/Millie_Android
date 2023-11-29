@@ -12,5 +12,6 @@ data class TodayBest(
         val author: String,
         val completionRate: Int,
         val readingTime: Int,
+        val rankChange: Int?
     )
 }
