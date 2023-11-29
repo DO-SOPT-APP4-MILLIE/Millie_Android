@@ -4,5 +4,21 @@
     <color name="SubYellow">#FCB90D</color>
     <color name="MainRed">#E11B20</color>
     <color name="SubRed">#FF898A</color>
+    <color name="MainPurple">#A452F5</color>
+    <color name="MainBlue">#0572C7</color>
+    <color name="SubBlue">#84B4FF</color>
+    <color name="White">#FFFFFF</color>
+    <color name="Black">#000000</color>
+    <color name="LightGrey01">#FBFBFB</color>
+    <color name="LightGrey02">#DBD7D7</color>
+    <color name="LightGrey03">#E7E7E9</color>
+    <color name="LightGrey04">#DFDFDF</color>
+    <color name="LightGrey05">#DCDCDC</color>
+    <color name="LightGrey06">#BFBFBF</color>
+    <color name="LightGrey07">#A5A5A5</color>
+    <color name="DarkGrey01">#6F6F6F</color>
+    <color name="DarkGrey02">#555555</color>
+    <color name="DarkGrey03">#242424</color>
+
 
 </resources>
