@@ -12,6 +12,8 @@ import com.millie.millieshelf.presentation.todayTop.attention.TodayAttentionAdap
 import com.millie.millieshelf.presentation.todayTop.best.TodayBestAdapter
 import com.millie.millieshelf.presentation.todayTop.bookmark.TodayBookmarkAdapter
 import com.millie.millieshelf.util.CustomSnapHelper
+import com.millie.millieshelf.util.EdgeMarginItemDecoration
+import com.millie.millieshelf.util.dpToPx
 
 class TodayTopFragment : BaseFragment<FragmentTodayTopBinding>() {
     private val viewModel by viewModels<TodayTopViewModel>()
@@ -39,6 +41,8 @@ class TodayTopFragment : BaseFragment<FragmentTodayTopBinding>() {
     private fun initBookmarkAdapter() {
         bookmarkAdapter = TodayBookmarkAdapter(requireContext())
         bookmarkAdapter.submitList(viewModel.mockTodayBookmarkList)
+
+        binding.rvTodayBookmark.addItemDecoration(EdgeMarginItemDecoration(edgeMargin = 24.dpToPx, itemMargin = 16.dpToPx))
         binding.rvTodayBookmark.adapter = bookmarkAdapter
     }
 
