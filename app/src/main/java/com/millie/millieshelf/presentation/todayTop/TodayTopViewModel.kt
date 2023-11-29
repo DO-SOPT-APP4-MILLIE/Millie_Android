@@ -9,12 +9,12 @@ import com.millie.millieshelf.model.response.TodayBest
 class TodayTopViewModel : ViewModel() {
     val mockTodayBookmarkList: List<TodayBookmarkModel> = listOf(
         TodayBookmarkModel(R.drawable.ic_today_bookmark_thumbs_up, "서점 베스트"),
-        TodayBookmarkModel(R.drawable.ic_today_bookmark_thumbs_up, "완독지수"),
-        TodayBookmarkModel(R.drawable.ic_today_bookmark_thumbs_up, "챗북 소식"),
-        TodayBookmarkModel(R.drawable.ic_today_bookmark_thumbs_up, "밀리 시리즈"),
-        TodayBookmarkModel(R.drawable.ic_today_bookmark_thumbs_up, "요즘 관심사"),
-        TodayBookmarkModel(R.drawable.ic_today_bookmark_thumbs_up, "밀리 아티클"),
-        TodayBookmarkModel(R.drawable.ic_today_bookmark_thumbs_up, "매거진 소식"),
+        TodayBookmarkModel(R.drawable.ic_today_bookmark_wandok, "완독지수"),
+        TodayBookmarkModel(R.drawable.ic_today_bookmark_comment, "챗북 소식"),
+        TodayBookmarkModel(R.drawable.ic_today_bookmark_series, "밀리 시리즈"),
+        TodayBookmarkModel(R.drawable.ic_today_bookmark_highlight, "요즘 관심사"),
+        TodayBookmarkModel(R.drawable.ic_today_bookmark_article, "밀리 아티클"),
+        TodayBookmarkModel(R.drawable.ic_today_bookmark_feed, "매거진 소식"),
     )
 
     val mockTodayBestList: List<TodayBest.Data> = listOf(
