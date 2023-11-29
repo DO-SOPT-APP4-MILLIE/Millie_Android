@@ -58,6 +58,8 @@ class TodayTopFragment : BaseFragment<FragmentTodayTopBinding>() {
     private fun initAttentionAdapter() {
         attentionAdapter = TodayAttentionAdapter(requireContext())
         attentionAdapter.submitList(viewModel.mockTodayAttentionList)
+
+        binding.rvTodayAttention.addItemDecoration(EdgeMarginItemDecoration(edgeMargin = 24.dpToPx, itemMargin = 12.dpToPx))
         binding.rvTodayAttention.adapter = attentionAdapter
     }
 
