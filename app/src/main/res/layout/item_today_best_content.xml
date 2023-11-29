@@ -2,17 +2,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="245dp"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginEnd="60dp"
-    android:layout_marginBottom="8dp"
-    android:paddingStart="24dp">
+    android:layout_marginEnd="36dp"
+    android:layout_marginBottom="8dp">
 
     <TextView
         android:id="@+id/tv_today_best_rank"
+        style="@style/TitleMedSubhead6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
+        android:layout_marginStart="27dp"
         android:layout_marginTop="29dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/iv_today_best_book"
@@ -20,12 +20,13 @@
 
     <TextView
         android:id="@+id/tv_today_best_rank_change"
+        style="@style/TitleMedSubhead8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="-"
         app:layout_constraintEnd_toEndOf="@id/tv_today_best_rank"
         app:layout_constraintStart_toStartOf="@id/tv_today_best_rank"
-        app:layout_constraintTop_toBottomOf="@id/tv_today_best_rank"
-        android:text="-" />
+        app:layout_constraintTop_toBottomOf="@id/tv_today_best_rank" />
 
     <ImageView
         android:id="@+id/iv_today_best_book"
