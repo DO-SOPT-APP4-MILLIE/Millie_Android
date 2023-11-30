@@ -9,6 +9,7 @@ import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import com.millie.millieshelf.R
 import com.millie.millieshelf.databinding.ActivityTodayBinding
+import com.millie.millieshelf.presentation.library.MylibraryFragment
 
 class TodayActivity : AppCompatActivity() {
 
@@ -30,6 +31,7 @@ class TodayActivity : AppCompatActivity() {
         binding.bnvToday.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.menu_feed -> navigateTo<TodayFragment>()
+                R.id.menu_shelf -> navigateTo<MylibraryFragment>()
             }
             true
         }

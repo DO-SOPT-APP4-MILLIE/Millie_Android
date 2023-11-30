@@ -299,7 +299,7 @@
             android:layout_height="83dp"
             android:layout_marginStart="12dp"
             android:layout_marginTop="12dp"
-            android:src="@drawable/best_img_01" />
+            tools:src="@drawable/best_img_01" />
 
         <TextView
             android:id="@+id/tv_economic"
@@ -308,7 +308,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="109dp"
             android:layout_marginBottom="12dp"
-            android:text="경영"
+            tools:text="경영"
             android:textStyle="bold"
             android:textSize="13dp" />
 
@@ -331,7 +331,7 @@
             android:layout_height="83dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="12dp"
-            android:src="@drawable/best_img_01" />
+            tools:src="@drawable/best_img_01" />
 
         <ImageView
             android:id="@+id/iv_self2"
@@ -339,7 +339,7 @@
             android:layout_height="83dp"
             android:layout_marginStart="67dp"
             android:layout_marginTop="12dp"
-            android:src="@drawable/best_img_01" />
+            tools:src="@drawable/best_img_01" />
 
         <TextView
             android:id="@+id/tv_self"
@@ -348,7 +348,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="109dp"
             android:layout_marginBottom="12dp"
-            android:text="자기계발"
+            tools:text="자기계발"
             android:textStyle="bold"
             android:textSize="13dp" />
     </androidx.cardview.widget.CardView>

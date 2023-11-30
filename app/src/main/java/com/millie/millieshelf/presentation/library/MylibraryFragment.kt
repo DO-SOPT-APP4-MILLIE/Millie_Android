@@ -26,18 +26,21 @@ class MylibraryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initViews()
-        viewModel.bookCollectionsLiveData.observe(viewLifecycleOwner){
-            binding.tvEconomic.text = it.data[0].category
-        }
-    }
 
-    private fun initViews() {
+        viewModel.bookCollectionsLiveData.observe(viewLifecycleOwner) {
+            binding.tvEconomic.text = it.data[0].category
+            binding.ivEconomic.load(it.data[0].book[0].thumbnail)
+
+            binding.tvSelf.text = it.data[1].category
+            binding.ivSelf1.load(it.data[1].book[0].thumbnail)
+            binding.ivSelf2.load(it.data[1].book[1].thumbnail)
+
+        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 }
+

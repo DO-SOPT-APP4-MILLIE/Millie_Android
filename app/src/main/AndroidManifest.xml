@@ -15,9 +15,7 @@
         <activity
             android:name=".presentation.detail.BookDetailActivity"
             android:exported="false" />
-        <activity
-            android:name=".presentation.library.SeActivity"
-            android:exported="false" />
+
         <activity
             android:name=".presentation.today.TodayActivity"
             android:exported="true"
@@ -36,8 +34,10 @@
             android:theme="@style/Theme.Millie_Android">
         </activity>
         <activity
-            android:name=".presentation.todayTop.TodayTopActivity"
-            android:exported="false" />
+            android:name=".presentation.best.BestActivity"
+            android:exported="true" />
+
+
     </application>
 
 </manifest>

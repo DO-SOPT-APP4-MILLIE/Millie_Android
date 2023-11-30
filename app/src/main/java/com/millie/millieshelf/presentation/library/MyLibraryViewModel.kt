@@ -1,5 +1,6 @@
 package com.millie.millieshelf.presentation.library
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.millie.millieshelf.data.api.ServicePool
@@ -11,7 +12,9 @@ import retrofit2.Response
 
 class MyLibraryViewModel : ViewModel() {
     val bookCollectionsLiveData = MutableLiveData<BaseResponse<List<BookCollections>>>()
-
+    init {
+        getBookCollections()
+    }
     fun getBookCollections() {
         ServicePool.bookService.getBookCollections()
             .enqueue(object : Callback<BaseResponse<List<BookCollections>>> {
@@ -21,6 +24,7 @@ class MyLibraryViewModel : ViewModel() {
                 ) {
                     if (response.isSuccessful) {
                         bookCollectionsLiveData.value = response.body()
+                        Log.d("my",bookCollectionsLiveData.value.toString())
                     }
                 }
 
@@ -28,7 +32,7 @@ class MyLibraryViewModel : ViewModel() {
                     call: Call<BaseResponse<List<BookCollections>>>,
                     t: Throwable
                 ) {
-                    TODO("Not yet implemented")
+                    Log.d("my","fail : ${t.message}")
                 }
 
             })

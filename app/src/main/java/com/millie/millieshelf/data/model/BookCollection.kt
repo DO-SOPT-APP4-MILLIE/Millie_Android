@@ -7,8 +7,8 @@ import kotlinx.serialization.Serializable
 data class BookCollections(
     @SerialName("category")
     val category: String = "",
-    @SerialName("books")
-    val books: List<BookCollection> = listOf(),
+    @SerialName("book")
+    val book: List<BookCollection> = listOf(),
 ) {
     @Serializable
     data class BookCollection(
