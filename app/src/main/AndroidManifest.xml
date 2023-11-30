@@ -13,25 +13,30 @@
         android:theme="@style/Theme.Millie_Android"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".presentation.detail.BookDetailActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".presentation.todaybottom.TodayActivity"
             android:exported="true"
             android:label="@string/title_activity_today"
-            android:theme="@style/Theme.Millie_Android">
+            android:theme="@style/Theme.Millie_Android" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".presentation.todayTop.TodayTopActivity"
-            android:exported="true" />
+
         <activity
             android:name=".presentation.MainActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/app_name"
             android:theme="@style/Theme.Millie_Android">
         </activity>
+        <activity
+            android:name=".presentation.todayTop.TodayTopActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
