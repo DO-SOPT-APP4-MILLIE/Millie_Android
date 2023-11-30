@@ -24,5 +24,5 @@ interface MillieService {
     ): Call<BaseResponse<Unit>>
 
     @GET("/api/me/collections")
-    fun getBookCollections(): Call<List<BaseResponse<BookCollections>>>
+    fun getBookCollections(): Call<BaseResponse<List<BookCollections>>>
 }

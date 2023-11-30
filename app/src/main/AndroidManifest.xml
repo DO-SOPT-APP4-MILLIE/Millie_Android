@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Millie_Android"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".presentation.library.SeActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.todaybottom.TodayActivity"
             android:exported="true"
             android:label="@string/title_activity_today"
@@ -30,14 +33,10 @@
             android:name=".presentation.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Millie_Android">
-        </activity>
+            android:theme="@style/Theme.Millie_Android"></activity>
         <activity
-            android:name=".Best.view.BestActivity"
-            android:exported="true" >
-
-        </activity>
-
+            android:name=".presentation.best.BestActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>
