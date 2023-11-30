@@ -17,7 +17,7 @@
             android:exported="false" />
 
         <activity
-            android:name=".presentation.todaybottom.TodayActivity"
+            android:name=".presentation.today.TodayActivity"
             android:exported="true"
             android:label="@string/title_activity_today"
             android:theme="@style/Theme.Millie_Android" >
@@ -27,7 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".presentation.MainActivity"
             android:exported="false"
