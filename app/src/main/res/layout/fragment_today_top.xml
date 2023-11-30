@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/today_best_toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_today_img_banner"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/iv_today_img_banner"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/today_best_toolbar" />
+
+        <TextView
+            android:id="@+id/tv_today_top_bookmark_title"
+            style="@style/TitleBoldHeadline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="즐겨찾기"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_today_img_banner" />
+
+        <ImageView
+            android:id="@+id/iv_today_top_bookmark_arrow"
+            android:layout_width="24dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="21dp"
+            android:src="@drawable/ic_right_arrow_black_24"
+            app:layout_constraintBottom_toBottomOf="@id/tv_today_top_bookmark_title"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_today_top_bookmark_title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_today_bookmark"
+            android:layout_width="0dp"
+            android:overScrollMode="never"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_today_top_bookmark_title"
+            tools:listitem="@layout/item_today_bookmark_content" />
+
+        <TextView
+            android:id="@+id/tv_today_top_best_title"
+            style="@style/TitleBoldHeadline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="지금! 서점 베스트"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_today_bookmark" />
+
+        <ImageView
+            android:id="@+id/iv_today_top_best_arrow"
+            android:layout_width="24dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="21dp"
+            android:src="@drawable/ic_right_arrow_black_24"
+            app:layout_constraintBottom_toBottomOf="@id/tv_today_top_best_title"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_today_top_best_title" />
+
+        <TextView
+            android:id="@+id/tv_today_top_best_sub_title"
+            style="@style/BodyRegBody7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="서점 3사 100위 내, 70권을 밀리에서 만나보세요"
+            app:layout_constraintStart_toStartOf="@id/tv_today_top_best_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_today_top_best_title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_today_best"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_today_top_best_sub_title"
+            tools:listitem="@layout/item_today_best_content" />
+
+        <TextView
+            android:id="@+id/tv_today_top_attention_title"
+            style="@style/TitleBoldHeadline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="62dp"
+            android:text="이번 주 주목할 책"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_today_best" />
+
+        <ImageView
+            android:id="@+id/iv_today_top_attention_arrow"
+            android:layout_width="24dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="21dp"
+            android:src="@drawable/ic_right_arrow_black_24"
+            app:layout_constraintBottom_toBottomOf="@id/tv_today_top_attention_title"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_today_top_attention_title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_today_attention"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_today_top_attention_title"
+            tools:listitem="@layout/item_today_attention_content" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

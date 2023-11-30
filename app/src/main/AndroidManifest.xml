@@ -15,6 +15,13 @@
         <activity
             android:name=".presentation.detail.BookDetailActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".presentation.todaybottom.TodayActivity"
+            android:exported="false"
+            android:label="@string/title_activity_today"
+            android:theme="@style/Theme.Millie_Android" />
+
         <activity
             android:name=".presentation.MainActivity"
             android:exported="true"
@@ -26,6 +33,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".presentation.todayTop.TodayTopActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
