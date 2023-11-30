@@ -4,6 +4,7 @@ import com.millie.millieshelf.data.model.BaseResponse
 import com.millie.millieshelf.data.model.Book
 import com.millie.millieshelf.data.model.BookCollections
 import com.millie.millieshelf.data.model.BookDetail
+import com.millie.millieshelf.model.response.TodayBest
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.POST
@@ -11,7 +12,7 @@ import retrofit2.http.Path
 
 interface MillieService {
     @GET("/api/books")
-    fun getBooks(): Call<List<BaseResponse<Book>>>
+    fun getBooks(): Call<TodayBest>
 
     @GET("/api/books/{bookId}")
     fun getBook(
