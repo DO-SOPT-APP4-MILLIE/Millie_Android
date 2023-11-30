@@ -1,4 +1,4 @@
-package com.millie.millieshelf.Best
+package com.millie.millieshelf.Best.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -1,4 +1,4 @@
-package com.millie.millieshelf.Best
+package com.millie.millieshelf.Best.view
 
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide

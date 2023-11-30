@@ -40,5 +40,6 @@ object ApiFactory {
 
 object ServicePool {
     val authService = ApiFactory.create<AuthService>(ApiFactory.AUTH_BASE_URL)
+    val libService = ApiFactory.create<LibService>(ApiFactory.AUTH_BASE_URL)
 }
 

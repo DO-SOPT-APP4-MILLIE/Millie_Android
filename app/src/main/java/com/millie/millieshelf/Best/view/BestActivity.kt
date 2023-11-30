@@ -1,8 +1,10 @@
-package com.millie.millieshelf.Best
+package com.millie.millieshelf.Best.view
 
 import android.os.Bundle
 import android.widget.Toast
+import com.millie.millieshelf.Best.Data.ResponseBookData
 import com.millie.millieshelf.Best.Data.ResponseBookDto
+import com.millie.millieshelf.Best.ServicePool
 import com.millie.millieshelf.base.BaseActivity
 import com.millie.millieshelf.databinding.ActivityBestBinding
 import retrofit2.Call
@@ -49,6 +51,7 @@ class BestActivity : BaseActivity<ActivityBestBinding>(ActivityBestBinding::infl
     override fun onDestroy() {
         super.onDestroy()
     }
+
 }
 
 
