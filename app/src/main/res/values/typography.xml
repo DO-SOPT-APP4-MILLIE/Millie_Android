@@ -35,6 +35,12 @@
         <item name="lineHeight">19dp</item>
     </style>
 
+    <style name="TitleBoldSubhead3" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_bold</item>
+        <item name="android:textSize">19sp</item>
+        <item name="lineHeight">17dp</item>
+    </style>
+
     <style name="TitleBoldSubhead4" parent="TextAppearance.Millie">
         <item name="fontFamily">@font/spoqahanssans_bold</item>
         <item name="android:textSize">14sp</item>
@@ -99,6 +105,12 @@
         <item name="fontFamily">@font/spoqahanssans_regular</item>
         <item name="android:textSize">16sp</item>
         <item name="lineHeight">24dp</item>
+    </style>
+
+    <style name="BodyRegBody5" parent="TextAppearance.Millie">
+        <item name="fontFamily">@font/spoqahanssans_regular</item>
+        <item name="android:textSize">13sp</item>
+        <item name="lineHeight">17dp</item>
     </style>
 
     <style name="BodyRegBody7" parent="TextAppearance.Millie">

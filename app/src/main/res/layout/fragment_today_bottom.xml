@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.todaybottom.TodayBottomFragment">
+
+        <TextView
+            android:id="@+id/tv_today_bottom_fourth"
+            style="@style/TitleBoldHeadline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="한 달 이내에 출간된 책"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_today_bottom_fourth"
+            android:layout_width="24dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="21dp"
+            android:src="@drawable/ic_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/tv_today_bottom_fourth"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_today_bottom_fourth" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_monthly_book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_today_bottom_fourth"
+            app:spanCount="2"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_monthly_book" />
+
+        <TextView
+            android:id="@+id/tv_today_bottom_fifth"
+            style="@style/TitleBoldSubhead3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
+            android:text="밀리 오리지널"
+            app:layout_constraintStart_toStartOf="@id/tv_today_bottom_fourth"
+            app:layout_constraintTop_toBottomOf="@id/rcv_monthly_book" />
+
+        <TextView
+            android:id="@+id/tv_today_bottom_fifth_desc"
+            style="@style/BodyRegBody5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="오직 밀리에서만 볼 수 있어요"
+            app:layout_constraintStart_toStartOf="@id/tv_today_bottom_fifth"
+            app:layout_constraintTop_toBottomOf="@id/tv_today_bottom_fifth" />
+
+        <ImageView
+            android:id="@+id/iv_today_bottom_fifth"
+            android:layout_width="24dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="21dp"
+            android:src="@drawable/ic_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/tv_today_bottom_fifth"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_today_bottom_fifth" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_original_chip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_today_bottom_fifth_desc"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_original_chip" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vp_original_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="24dp"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_original_book"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rcv_original_chip" />
+
+        <TextView
+            android:id="@+id/tv_today_bottom_sixth"
+            style="@style/TitleBoldHeadline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="41dp"
+            android:text="이번 주 취향별 추천 책"
+            android:textColor="@color/DarkGrey03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vp_original_book" />
+
+        <ImageView
+            android:id="@+id/iv_today_bottom_sixth"
+            android:layout_width="24dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="21dp"
+            android:src="@drawable/ic_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/tv_today_bottom_sixth"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_today_bottom_sixth" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_weekly_taste_chip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_today_bottom_sixth"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_original_chip" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_weekly_taste_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rcv_weekly_taste_chip"
+            app:spanCount="3"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_weekly_taste_book" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider_today_first"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="29dp"
+            app:dividerColor="@color/LightGrey03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rcv_weekly_taste_book" />
+
+        <ImageView
+            android:id="@+id/iv_today_bottom_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="19dp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider_today_first" />
+
+        <TextView
+            android:id="@+id/tv_today_bottom_info"
+            style="@style/BodyRegBody5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="[업데이트] 신규 PC뷰어 베타버전 오픈_10/23(월)"
+            app:layout_constraintBottom_toBottomOf="@id/iv_today_bottom_info"
+            app:layout_constraintStart_toEndOf="@id/iv_today_bottom_info"
+            app:layout_constraintTop_toTopOf="@id/iv_today_bottom_info" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider_today_second"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            app:dividerColor="@color/LightGrey03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_today_bottom_info" />
+
+        <TextView
+            android:id="@+id/tv_today_footer_title"
+            style="@style/TitleBoldSubhead2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="25dp"
+            android:text="(주) 밀리의 서재"
+            android:textColor="@color/DarkGrey03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider_today_second" />
+
+        <ImageView
+            android:id="@+id/iv_today_footer_sns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/ic_sns"
+            app:layout_constraintBottom_toBottomOf="@id/tv_today_footer_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_today_footer_title" />
+
+        <TextView
+            android:id="@+id/tv_today_footer_expand"
+            style="@style/BodyRegBody8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:text="사업자 정보 펼쳐보기"
+            android:textColor="@color/LightGrey07"
+            app:layout_constraintStart_toStartOf="@id/tv_today_footer_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_today_footer_title" />
+
+        <ImageView
+            android:id="@+id/iv_today_footer_expand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:src="@drawable/ic_bottom_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/tv_today_footer_expand"
+            app:layout_constraintStart_toEndOf="@id/tv_today_footer_expand"
+            app:layout_constraintTop_toTopOf="@id/tv_today_footer_expand" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_today_footer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="104dp"
+            app:layout_constraintHorizontal_bias="0"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider_today_second"
+            app:spanCount="3"
+            tools:listitem="@layout/item_footer_info" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copyright © 2022 밀리의 서재 AllRights Reserved."
+            style="@style/BodyRegBody9"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintStart_toStartOf="@id/rcv_today_footer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rcv_today_footer"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
