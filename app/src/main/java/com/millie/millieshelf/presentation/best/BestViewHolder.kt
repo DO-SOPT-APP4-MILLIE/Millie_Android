@@ -1,29 +1,50 @@
 package com.millie.millieshelf.presentation.best
 
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
+import com.millie.millieshelf.R
 import com.millie.millieshelf.databinding.ItemBookBinding
+import com.millie.millieshelf.model.response.TodayBest
+import kotlin.math.abs
 
 class BestViewHolder(
     private val binding: ItemBookBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
-//    fun onBind(item: ResponseBookData) {
-//        binding.tvBookId.text = item.id.toString()
-//        binding.tvBookName.text = item.title
-//        Glide.with(binding.root.context)
-//            .load(item.imageUrl)
-//            .into(binding.ivBookCover)
-//        binding.tvBookAuthor.text = item.author
-//        binding.tvBookCompletion.text = "${item.completionRate}%"
-//        binding.tvBookReadingtime.text = "${item.readingTime}분"
-//        val rankChange = item.rankChange
-//        val rankChangeText = when {
-//            rankChange == null -> "New"
-//            rankChange == 0 -> "-"
-//            rankChange > 0 -> "+${rankChange}"
-//            else -> rankChange.toString()
-//        }
-//        binding.tvRanking.text = rankChangeText
-//
+    fun onBind(data: TodayBest.Data) {
+        binding.tvBookId.text = data.id.toString()
+        binding.tvBookName.text = data.title
+        binding.ivBookCover.load(data.thumbnail)
+        binding.tvBookAuthor.text = data.author
+        binding.tvBookCompletion.text = "${data.completionRate}%"
+        binding.tvBookReadingtime.text = "${data.readingTime}분"
+        val rankChange = data.rankChange
+        val rankChangeText: String
+        val textColor: Int = when {
+            rankChange == null -> {
+                rankChangeText = "New"
+                R.color.SubYellow
+            }
+            rankChange == 0 -> {
+                rankChangeText = "-"
+                R.color.Black
+            }
+            rankChange > 0 -> {
+                rankChangeText = "▴ $rankChange"
+                R.color.MainRed
+            }
+            else -> {
+                rankChangeText = "▾ ${abs(rankChange)}"
+                R.color.MainBlue
+            }
+        }
 
+        setTextColor(rankChangeText, textColor)
     }
+
+    private fun setTextColor(rankChangeText: String, color: Int) {
+        binding.tvRanking.text = rankChangeText
+        binding.tvRanking.setTextColor(ContextCompat.getColor(binding.root.context, color))
+    }
+}
