@@ -13,6 +13,8 @@ class MylibraryFragment : Fragment() {
     private var _binding: FragmentMylibraryBinding? = null
     private val binding get() = _binding!!
 
+    private val viewModel by viewModels<MyLibraryViewModel>()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
