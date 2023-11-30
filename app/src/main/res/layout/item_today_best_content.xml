@@ -30,8 +30,8 @@
 
     <ImageView
         android:id="@+id/iv_today_best_book"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="61dp"
+        android:layout_height="87dp"
         android:layout_marginStart="21dp"
         android:src="@drawable/iv_today_best_img"
         app:layout_constraintStart_toEndOf="@id/tv_today_best_rank"
@@ -40,10 +40,12 @@
     <TextView
         android:id="@+id/tv_today_best_book_name"
         style="@style/TitleMedSubhead8"
-        android:layout_width="wrap_content"
+        android:layout_width="118dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
         android:layout_marginTop="17dp"
+        android:ellipsize="end"
+        android:maxLines="1"
         app:layout_constraintStart_toEndOf="@id/iv_today_best_book"
         app:layout_constraintTop_toTopOf="@id/iv_today_best_book"
         tools:text="트렌드 코리아 2024" />

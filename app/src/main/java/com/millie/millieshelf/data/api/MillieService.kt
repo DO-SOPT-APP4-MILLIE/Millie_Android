@@ -12,7 +12,7 @@ import retrofit2.http.Path
 
 interface MillieService {
     @GET("/api/books")
-    suspend fun getBooks(): Call<TodayBest>
+    fun getBooks(): Call<TodayBest>
 
     @GET("/api/books/{bookId}")
     fun getBook(

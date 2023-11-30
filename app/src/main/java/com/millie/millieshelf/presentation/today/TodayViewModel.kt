@@ -30,7 +30,7 @@ class TodayViewModel : ViewModel() {
     val todayBestList: LiveData<List<TodayBest.Data>>
         get() = _todayBestList
 
-    suspend fun getTodayBestList() {
+    fun getTodayBestList() {
         bookService.getBooks().enqueue(object : retrofit2.Callback<TodayBest> {
             override fun onResponse(
                 call: Call<TodayBest>,

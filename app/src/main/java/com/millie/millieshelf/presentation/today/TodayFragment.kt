@@ -5,8 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearSnapHelper
 import com.millie.millieshelf.base.BaseFragment
 import com.millie.millieshelf.databinding.FragmentTodayBinding
@@ -16,7 +14,6 @@ import com.millie.millieshelf.presentation.today.bookmark.TodayBookmarkAdapter
 import com.millie.millieshelf.util.CustomSnapHelper
 import com.millie.millieshelf.util.EdgeMarginItemDecoration
 import com.millie.millieshelf.util.dpToPx
-import kotlinx.coroutines.launch
 
 class TodayFragment : BaseFragment<FragmentTodayBinding>() {
     private val viewModel by viewModels<TodayViewModel>()
@@ -40,13 +37,11 @@ class TodayFragment : BaseFragment<FragmentTodayBinding>() {
         super.onViewCreated(view, savedInstanceState)
         setInitAdapter()
 
-        viewModel.todayBestList.observe(viewLifecycleOwner){
+        viewModel.todayBestList.observe(viewLifecycleOwner) {
             bestAdapter.submitList(it)
         }
 
-        lifecycleScope.launch {
-            viewModel.getTodayBestList()
-        }
+        viewModel.getTodayBestList()
     }
 
     private fun setInitAdapter() {
