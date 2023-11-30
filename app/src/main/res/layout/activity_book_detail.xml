@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.detail.BookDetailActivity">
+
+    <ImageView
+        android:id="@+id/ivHeader"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/img_book_detail_section"
+        app:layout_constraintDimensionRatio="360:44"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/svBookDetail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ivBottomButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivHeader">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F7F7F7">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clBookInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.33" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.66" />
+
+                <ImageView
+                    android:id="@+id/ivEbook"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="13dp"
+                    android:src="@drawable/img_book_btn"
+                    app:layout_constraintBottom_toTopOf="@id/ivBookMainImage"
+                    app:layout_constraintDimensionRatio="360:66"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/ivBookMainImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="70dp"
+                    android:layout_marginTop="26dp"
+                    android:src="@drawable/img_book_main"
+                    app:layout_constraintBottom_toTopOf="@id/tvBookTitle"
+                    app:layout_constraintDimensionRatio="220:326"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivEbook" />
+
+                <TextView
+                    android:id="@+id/tvBookTitle"
+                    style="?textAppearanceHeadline2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="#242424"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/tvBookAuthor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivBookMainImage"
+                    tools:text="트렌드 코리아 2024" />
+
+                <TextView
+                    android:id="@+id/tvBookAuthor"
+                    style="@style/TitleMedSubhead8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="#A5A5A5"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvBookTitle"
+                    tools:text="김난도, 전미영, 최지혜, 이수진, 권정윤, 한다혜, 이준영, 이향은,…" />
+
+                <ImageView
+                    android:id="@+id/ivDetailProfile"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="14dp"
+                    android:src="@drawable/img_detail_profile"
+                    app:layout_constraintEnd_toStartOf="@id/guide1"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvBookAuthor" />
+
+                <TextView
+                    android:id="@+id/tvBookStore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이 책이 담긴 서재"
+                    android:textColor="#6f6f6f"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="@id/ivDetailProfile"
+                    app:layout_constraintStart_toStartOf="@id/ivDetailProfile"
+                    app:layout_constraintTop_toBottomOf="@id/ivDetailProfile" />
+
+                <TextView
+                    android:id="@+id/tvBookStoreCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="26dp"
+                    android:textColor="#242424"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/ivDetailProfile"
+                    app:layout_constraintStart_toStartOf="@id/ivDetailProfile"
+                    app:layout_constraintTop_toBottomOf="@id/tvBookStore"
+                    tools:text="2.6만 개+" />
+
+                <View
+                    android:id="@+id/v1"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:background="#DFDFDF"
+                    app:layout_constraintBottom_toBottomOf="@id/tvBookStoreCount"
+                    app:layout_constraintEnd_toEndOf="@id/guide1"
+                    app:layout_constraintStart_toStartOf="@id/guide1"
+                    app:layout_constraintTop_toTopOf="@id/ivDetailProfile" />
+
+                <ImageView
+                    android:id="@+id/ivPost"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_post"
+                    app:layout_constraintBottom_toBottomOf="@id/ivDetailProfile"
+                    app:layout_constraintEnd_toStartOf="@id/guide2"
+                    app:layout_constraintStart_toEndOf="@id/guide1"
+                    app:layout_constraintTop_toTopOf="@id/ivDetailProfile" />
+
+                <TextView
+                    android:id="@+id/tvPost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="포스트"
+                    android:textColor="#6f6f6f"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="@id/ivPost"
+                    app:layout_constraintStart_toStartOf="@id/ivPost"
+                    app:layout_constraintTop_toBottomOf="@id/ivPost" />
+
+                <TextView
+                    android:id="@+id/tvPostCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="26dp"
+                    android:textColor="#242424"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/tvPost"
+                    app:layout_constraintStart_toStartOf="@id/tvPost"
+                    app:layout_constraintTop_toBottomOf="@id/tvPost"
+                    tools:text="4개" />
+
+                <View
+                    android:id="@+id/v2"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:background="#DFDFDF"
+                    app:layout_constraintBottom_toBottomOf="@id/tvBookStoreCount"
+                    app:layout_constraintEnd_toEndOf="@id/guide2"
+                    app:layout_constraintStart_toStartOf="@id/guide2"
+                    app:layout_constraintTop_toTopOf="@id/ivDetailProfile" />
+
+
+                <ImageView
+                    android:id="@+id/ivReview"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/img_review"
+                    app:layout_constraintBottom_toBottomOf="@id/ivDetailProfile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guide2"
+                    app:layout_constraintTop_toTopOf="@id/ivDetailProfile" />
+
+                <TextView
+                    android:id="@+id/tvReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="한 줄 리뷰"
+                    android:textColor="#6f6f6f"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="@id/ivReview"
+                    app:layout_constraintStart_toStartOf="@id/ivReview"
+                    app:layout_constraintTop_toBottomOf="@id/ivReview" />
+
+                <TextView
+                    android:id="@+id/tvReviewCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="26dp"
+                    android:textColor="#242424"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/tvReview"
+                    app:layout_constraintStart_toStartOf="@id/tvReview"
+                    app:layout_constraintTop_toBottomOf="@id/tvReview"
+                    tools:text="4개" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="11dp"
+                android:src="@drawable/img_book_detail_distribution"
+                app:layout_constraintBottom_toTopOf="@id/iv2"
+                app:layout_constraintDimensionRatio="360:541"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clBookInfo" />
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="11dp"
+                android:src="@drawable/img_book_detail_chart"
+                app:layout_constraintDimensionRatio="360:467"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv1" />
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="11dp"
+                android:src="@drawable/img_book_detai_best"
+                app:layout_constraintDimensionRatio="360:53"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv2" />
+
+            <ImageView
+                android:id="@+id/iv4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="11dp"
+                android:src="@drawable/img_book_detail_two_book"
+                app:layout_constraintDimensionRatio="360:346"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv3" />
+
+            <ImageView
+                android:id="@+id/iv5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="11dp"
+                android:src="@drawable/img_book_detail_sub_title"
+                app:layout_constraintDimensionRatio="360:346"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv4" />
+
+            <ImageView
+                android:id="@+id/iv6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="11dp"
+                android:src="@drawable/img_book_detail_list"
+                app:layout_constraintDimensionRatio="360:245"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv5" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/ivBottomButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/img_book_detail_bottom_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="360:66"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
