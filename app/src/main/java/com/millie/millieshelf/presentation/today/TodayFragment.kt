@@ -1,6 +1,8 @@
 package com.millie.millieshelf.presentation.today
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearSnapHelper
 import com.millie.millieshelf.base.BaseFragment
 import com.millie.millieshelf.databinding.FragmentTodayBinding
+import com.millie.millieshelf.presentation.best.BestActivity
 import com.millie.millieshelf.presentation.today.attention.TodayAttentionAdapter
 import com.millie.millieshelf.presentation.today.best.TodayBestAdapter
 import com.millie.millieshelf.presentation.today.bookmark.TodayBookmarkAdapter
@@ -30,7 +33,7 @@ class TodayFragment : BaseFragment<FragmentTodayBinding>() {
 
     override fun getFragmentBinding(
         inflater: LayoutInflater,
-        container: ViewGroup?
+        container: ViewGroup?,
     ): FragmentTodayBinding = FragmentTodayBinding.inflate(inflater, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -55,22 +58,30 @@ class TodayFragment : BaseFragment<FragmentTodayBinding>() {
     }
 
     private fun initBookmarkAdapter() {
-        bookmarkAdapter = TodayBookmarkAdapter(requireContext())
+        bookmarkAdapter = TodayBookmarkAdapter(
+            context = requireContext(),
+            onClick = {
+                Log.d("millie", "TodayFragment - initBookmarkAdapter() : $it")
+                if (it.title.contains("베스트")) {
+                    Intent(requireContext(), BestActivity::class.java).apply {
+                        startActivity(this)
+                    }
+                }
+            },
+        )
         bookmarkAdapter.submitList(viewModel.mockTodayBookmarkList)
 
         binding.rvTodayBookmark.addItemDecoration(
             EdgeMarginItemDecoration(
                 edgeMargin = 24.dpToPx,
-                itemMargin = 16.dpToPx
-            )
+                itemMargin = 16.dpToPx,
+            ),
         )
         binding.rvTodayBookmark.adapter = bookmarkAdapter
     }
 
     private fun initBestAdapter() {
         bestAdapter = TodayBestAdapter(requireContext())
-        //bestAdapter.submitList(viewModel.mockTodayBestList)
-
         bestSnapHelper = CustomSnapHelper()
         bestSnapHelper.attachToRecyclerView(binding.rvTodayBest)
         binding.rvTodayBest.adapter = bestAdapter
@@ -83,8 +94,8 @@ class TodayFragment : BaseFragment<FragmentTodayBinding>() {
         binding.rvTodayAttention.addItemDecoration(
             EdgeMarginItemDecoration(
                 edgeMargin = 24.dpToPx,
-                itemMargin = 12.dpToPx
-            )
+                itemMargin = 12.dpToPx,
+            ),
         )
         binding.rvTodayAttention.adapter = attentionAdapter
     }

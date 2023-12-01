@@ -21,7 +21,7 @@ feature/where-작업명
 ```
 
 ## [GIT CONVENTION](https://www.notion.so/dosopt/Android-Notion-94ea993513c34dc4bcd81c0292746764)
-develop에서 맡은 기능에 대한 feature 브랜치를 파서 각자 작업 후 PR을 올린다. 조원 1명 이상의 approve를 받은 후에 develop으로 merge 한다.
+develop에서 맡은 기능에 대한 feature 브랜치를 파서 각자 작업 후 PR을 올린다. develop으로 merge 한다. 상황에 따라 간단한 작업은 바로 머지가 가능하다.
 
 ## [CODE CONVENTION](https://www.notion.so/dosopt/Android-Notion-94ea993513c34dc4bcd81c0292746764)
 기본적인 kotlin 컨벤션을 따른다.

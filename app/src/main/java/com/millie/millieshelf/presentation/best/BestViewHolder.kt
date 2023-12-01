@@ -9,10 +9,14 @@ import com.millie.millieshelf.model.response.TodayBest
 import kotlin.math.abs
 
 class BestViewHolder(
-    private val binding: ItemBookBinding
+    private val binding: ItemBookBinding,
+    private val onClick: (TodayBest.Data) -> Unit,
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun onBind(data: TodayBest.Data) {
+        itemView.setOnClickListener {
+            onClick(data)
+        }
         binding.tvBookId.text = data.id.toString()
         binding.tvBookName.text = data.title
         binding.ivBookCover.load(data.thumbnail)
@@ -26,14 +30,17 @@ class BestViewHolder(
                 rankChangeText = "New"
                 R.color.SubYellow
             }
+
             rankChange == 0 -> {
                 rankChangeText = "-"
                 R.color.Black
             }
+
             rankChange > 0 -> {
                 rankChangeText = "▴ $rankChange"
                 R.color.MainRed
             }
+
             else -> {
                 rankChangeText = "▾ ${abs(rankChange)}"
                 R.color.MainBlue

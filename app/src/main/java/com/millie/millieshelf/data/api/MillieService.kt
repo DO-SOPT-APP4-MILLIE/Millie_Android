@@ -1,9 +1,9 @@
 package com.millie.millieshelf.data.api
 
 import com.millie.millieshelf.data.model.BaseResponse
-import com.millie.millieshelf.data.model.Book
 import com.millie.millieshelf.data.model.BookCollections
 import com.millie.millieshelf.data.model.BookDetail
+import com.millie.millieshelf.model.response.PostArchiveResponse
 import com.millie.millieshelf.model.response.TodayBest
 import retrofit2.Call
 import retrofit2.http.GET
@@ -27,9 +27,10 @@ interface MillieService {
 
     @POST("/api/books/{bookId}/archive")
     fun postArchiveBook(
+        @Header("X-AUTH-ID") userId: Int = 1,
         @Path("bookId") bookId: String,
-    ): Call<BaseResponse<Unit>>
+    ): Call<PostArchiveResponse>
 
     @GET("/api/me/collections")
-    fun getBookCollections(@Header("X-AUTH-ID") userId:Int = 1): Call<BaseResponse<List<BookCollections>>>
+    fun getBookCollections(@Header("X-AUTH-ID") userId: Int = 1): Call<BaseResponse<List<BookCollections>>>
 }
