@@ -3,7 +3,7 @@
 ## CONTRIBUTORS
 | 곽의진<br/>([@KwakEuiJin](https://github.com/KwakEuiJin)) | 김지영<br/>([@amourxyoung](https://github.com/amourxyoung)) | 박동민<br/>([@minju1459](https://github.com/chattymin)) | 조세연<br/>([@crownjoe](https://github.com/crownjoe)) |
 | :---: | :---: | :---: | :---: |
-| <img width="540" src="https://avatars.githubusercontent.com/u/93872496?v=4"/> | <img width="540" src="https://avatars.githubusercontent.com/u/76741702?v=4"/> | <img width="540" src="https://avatars.githubusercontent.com/u/52882799?v=4"/> | <img width="540" src="https://avatars.githubusercontent.com/u/135544903?v=4"/> |
+| <img width="540" src="https://avatars.githubusercontent.com/u/93872496?v=4"/> | <img width="540" src="https://avatars.githubusercontent.com/u/62274335?v=4"/> | <img width="540" src="https://avatars.githubusercontent.com/u/52882799?v=4"/> | <img width="540" src="https://avatars.githubusercontent.com/u/135544903?v=4"/> |
 | `Detail` | `Today` | `Today` | `Best` <br/> `My Shelf` |
 <br>
 
@@ -27,3 +27,6 @@ develop에서 맡은 기능에 대한 feature 브랜치를 파서 각자 작업 
 기본적인 kotlin 컨벤션을 따른다.
 
 ## 시연 영상
+
+https://github.com/DO-SOPT-APP4-MILLIE/Millie_Android/assets/93872496/4a64298b-de91-4e49-9a31-9983df9c4271
+
