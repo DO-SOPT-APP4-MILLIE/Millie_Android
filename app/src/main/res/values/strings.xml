@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Millie_Android</string>
+
+    <!--error_message-->
+    <string name="BINDING_ERROR">BINDING ERROR</string>
+
     <!--icon_title-->
     <string name="BELL">bell</string>
 

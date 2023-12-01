@@ -1,25 +1,24 @@
 package com.millie.millieshelf.data.model
 
-
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
 data class BookDetail(
-    @SerialName("archivedCount")
-    val archivedCount: String = "",
-    @SerialName("author")
-    val author: String = "",
-    @SerialName("description")
-    val description: String = "",
     @SerialName("id")
-    val id: String = "",
-    @SerialName("imageUrl")
-    val imageUrl: String = "",
-    @SerialName("postCount")
-    val postCount: String = "",
-    @SerialName("reviewCount")
-    val reviewCount: String = "",
+    val id: Long,
     @SerialName("title")
-    val title: String = ""
+    val title: String,
+    @SerialName("author")
+    val author: String,
+    @SerialName("thumbnail")
+    val thumbnail: String,
+    @SerialName("archivedCount")
+    val archivedCount: Int,
+    @SerialName("postCount")
+    val postCount: Int,
+    @SerialName("reviewCount")
+    val reviewCount: Int,
+    @SerialName("Description")
+    val description: String,
 )

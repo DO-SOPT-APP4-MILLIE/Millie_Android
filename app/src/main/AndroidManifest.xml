@@ -14,13 +14,7 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".presentation.detail.BookDetailActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".presentation.todaybottom.TodayActivity"
-            android:exported="true"
-            android:label="@string/title_activity_today"
-            android:theme="@style/Theme.Millie_Android" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,11 +23,16 @@
         </activity>
 
         <activity
+            android:name=".presentation.todaybottom.TodayActivity"
+            android:exported="true"
+            android:label="@string/title_activity_today"
+            android:theme="@style/Theme.Millie_Android" />
+
+        <activity
             android:name=".presentation.MainActivity"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Millie_Android">
-        </activity>
+            android:theme="@style/Theme.Millie_Android" />
         <activity
             android:name=".presentation.todayTop.TodayTopActivity"
             android:exported="false" />
