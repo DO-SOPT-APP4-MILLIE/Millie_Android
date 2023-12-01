@@ -1,6 +1,5 @@
-package com.millie.millieshelf.presentation.todayTop.bookmark
+package com.millie.millieshelf.presentation.today.bookmark
 
-import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 import com.millie.millieshelf.databinding.ItemTodayBookmarkContentBinding
 import com.millie.millieshelf.model.TodayBookmarkModel

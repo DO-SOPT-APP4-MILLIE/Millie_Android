@@ -14,19 +14,19 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".presentation.detail.BookDetailActivity"
-            android:exported="true">
+            android:exported="false" />
+
+        <activity
+            android:name=".presentation.today.TodayActivity"
+            android:exported="true"
+            android:label="@string/title_activity_today"
+            android:theme="@style/Theme.Millie_Android" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".presentation.todaybottom.TodayActivity"
-            android:exported="true"
-            android:label="@string/title_activity_today"
-            android:theme="@style/Theme.Millie_Android" />
 
         <activity
             android:name=".presentation.MainActivity"

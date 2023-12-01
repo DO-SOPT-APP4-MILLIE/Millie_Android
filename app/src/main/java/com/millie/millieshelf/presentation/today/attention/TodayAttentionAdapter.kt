@@ -1,4 +1,4 @@
-package com.millie.millieshelf.presentation.todayTop.attention
+package com.millie.millieshelf.presentation.today.attention
 
 import android.content.Context
 import android.view.LayoutInflater

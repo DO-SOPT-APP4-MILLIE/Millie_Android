@@ -1,10 +1,14 @@
 package com.millie.millieshelf.model.response
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class TodayBest(
     val code: Int,
-    val data: List<Data>,
-    val msg: String
+    val msg: String,
+    val data: List<Data>
 ) {
+    @Serializable
     data class Data(
         val id: Long,
         val title: String,
@@ -12,6 +16,6 @@ data class TodayBest(
         val author: String,
         val completionRate: Int,
         val readingTime: Int,
-        val rankChange: Int?
+        val rankChange: Int? = null
     )
 }

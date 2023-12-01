@@ -1,4 +1,4 @@
-package com.millie.millieshelf.presentation.todayTop.attention
+package com.millie.millieshelf.presentation.today.attention
 
 import androidx.recyclerview.widget.RecyclerView
 import com.millie.millieshelf.databinding.ItemTodayAttentionContentBinding
