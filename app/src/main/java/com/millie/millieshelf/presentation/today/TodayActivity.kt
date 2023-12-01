@@ -2,6 +2,7 @@ package com.millie.millieshelf.presentation.today
 
 import android.animation.ObjectAnimator
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -22,6 +23,16 @@ class TodayActivity : AppCompatActivity() {
         setContentView(binding.root)
         clickFabBtn()
         initBottomNavigation()
+        checkIntent()
+    }
+
+    private fun checkIntent() {
+        Log.d("TAG", "checkIntent: ${intent.getStringExtra("detail")}")
+        intent.getStringExtra("detail")?.let {
+            Log.d("TAG", "checkIntent: $it")
+            binding.bnvToday.selectedItemId = R.id.menu_shelf
+            navigateTo<MylibraryFragment>()
+        }
     }
 
     private fun initBottomNavigation() {
