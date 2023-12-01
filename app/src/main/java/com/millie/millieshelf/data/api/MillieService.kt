@@ -16,8 +16,13 @@ interface MillieService {
 
     @GET("/api/books/{bookId}")
     fun getBook(
-        @Path("bookId") bookId: String,
+        @Path("bookId") bookId: Int,
     ): Call<BaseResponse<BookDetail>>
+
+    @GET("/api/books/{bookId}")
+    suspend fun getBookDetail(
+        @Path("bookId") bookId: Int,
+    ): Result<BaseResponse<BookDetail>>
 
     @POST("/api/books/{bookId}/archive")
     fun postArchiveBook(
