@@ -1,7 +1,7 @@
 # CDS Seminar - 밀리의 서재
 
 ## CONTRIBUTORS
-| 곽의진<br/>([@KwakEuiJin](https://github.com/KwakEuiJin)) | 김지영<br/>([@amourxyoung](https://github.com/amourxyoung)) | 박동민<br/>([@minju1459](https://github.com/chattymin)) | 조세연<br/>([@crownjoe](https://github.com/crownjoe)) |
+| 곽의진<br/>([@KwakEuiJin](https://github.com/KwakEuiJin)) | 김지영<br/>([@amourxyoung](https://github.com/amourxyoung)) | 박동민<br/>([@chattymin](https://github.com/chattymin)) | 조세연<br/>([@crownjoe](https://github.com/crownjoe)) |
 | :---: | :---: | :---: | :---: |
 | <img width="540" src="https://avatars.githubusercontent.com/u/93872496?v=4"/> | <img width="540" src="https://avatars.githubusercontent.com/u/62274335?v=4"/> | <img width="540" src="https://avatars.githubusercontent.com/u/52882799?v=4"/> | <img width="540" src="https://avatars.githubusercontent.com/u/135544903?v=4"/> |
 | `Detail` | `Today` | `Today` | `Best` <br/> `My Shelf` |
