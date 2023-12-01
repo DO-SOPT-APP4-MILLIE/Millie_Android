@@ -34,8 +34,10 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.Millie_Android" />
         <activity
-            android:name=".presentation.todayTop.TodayTopActivity"
-            android:exported="false" />
+            android:name=".presentation.best.BestActivity"
+            android:exported="true" />
+
+
     </application>
 
 </manifest>

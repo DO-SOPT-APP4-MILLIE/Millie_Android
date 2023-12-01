@@ -7,6 +7,7 @@ import com.millie.millieshelf.data.model.BookDetail
 import com.millie.millieshelf.model.response.TodayBest
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.POST
 import retrofit2.http.Path
 
@@ -30,5 +31,5 @@ interface MillieService {
     ): Call<BaseResponse<Unit>>
 
     @GET("/api/me/collections")
-    fun getBookCollections(): Call<List<BaseResponse<BookCollections>>>
+    fun getBookCollections(@Header("X-AUTH-ID") userId:Int = 1): Call<BaseResponse<List<BookCollections>>>
 }

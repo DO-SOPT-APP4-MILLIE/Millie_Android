@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 선택되었을 때의 배경 -->
+    <item android:color="@color/DarkGrey03" android:radius="50dp" android:state_checked="true" />
+    <!-- 선택되지 않았을 때의 배경 -->
+    <item android:color="@android:color/transparent" android:radius="50dp"/>
+</selector>

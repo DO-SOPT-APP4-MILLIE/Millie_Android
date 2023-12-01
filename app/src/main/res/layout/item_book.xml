@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/book"
+        android:layout_width="38dp"
+        android:layout_height="51dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="34dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_book_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            app:layout_constraintTop_toBottomOf="@id/tv_book_id"
+            app:layout_constraintStart_toStartOf="@id/tv_book_id"
+            app:layout_constraintEnd_toEndOf="@id/tv_book_id"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_book_cover"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/best_img_01"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toEndOf="@id/book"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_book_name"
+        android:layout_width="147dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="18dp"
+        tools:text="트렌드 코리아 2024"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/iv_book_cover"
+        app:layout_constraintTop_toTopOf="@id/iv_book_cover" />
+
+    <TextView
+        android:id="@+id/tv_book_author"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        tools:text="김난도, 전미영, 최지혜"
+        android:textSize="12dp"
+        android:textColor="#6F6F6F"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/iv_book_cover"
+        app:layout_constraintTop_toBottomOf="@id/tv_book_name" />
+
+    <ImageView
+        android:id="@+id/iv_book_compleiton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="22dp"
+        android:src="@drawable/ic_best_completion"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@id/iv_book_cover"
+        app:layout_constraintTop_toBottomOf="@id/tv_book_author" />
+
+    <TextView
+        android:id="@+id/tv_book_completion"
+        android:layout_width="24dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5.5dp"
+        tools:text="42"
+        android:textSize="12dp"
+        android:textColor="#6F6F6F"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/iv_book_compleiton"
+        app:layout_constraintTop_toBottomOf="@id/tv_book_author" />
+
+    <!--<TextView
+        android:id="@+id/tv_percent"
+        android:layout_width="9dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="5.5dp"
+        android:text="%"
+        android:textSize="12dp"
+        android:textColor="#6F6F6F"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/iv_book_compleiton"
+        app:layout_constraintTop_toBottomOf="@id/tv_book_author" />!-->
+
+    <View
+        android:id="@+id/vertical_line"
+        android:layout_width="1dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="4dp"
+        android:background="#6F6F6F"
+        app:layout_constraintStart_toEndOf="@id/tv_book_completion"
+        app:layout_constraintTop_toTopOf="@id/tv_book_completion" />
+
+    <TextView
+        android:id="@+id/tv_book_readingtime"
+        android:layout_width="40dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5.5dp"
+        tools:text="134분"
+        android:textSize="12dp"
+        android:textColor="#6F6F6F"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/vertical_line"
+        app:layout_constraintTop_toBottomOf="@id/tv_book_author" />
+
+    <!--<TextView
+        android:id="@+id/tv_min"
+        android:layout_width="15dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="5.5dp"
+        android:text="분"
+        android:textSize="12dp"
+        android:textColor="#6F6F6F"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/vertical_line"
+        app:layout_constraintTop_toBottomOf="@id/tv_book_author" />!-->
+
+    <View
+        android:id="@+id/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F7F7F7"
+        app:layout_constraintTop_toBottomOf="@id/iv_book_cover"
+        android:layout_marginTop="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
