@@ -2,6 +2,8 @@ package com.millie.millieshelf.presentation.best
 
 import android.os.Bundle
 import android.widget.Toast
+import com.google.android.material.chip.Chip
+import com.millie.millieshelf.R
 import com.millie.millieshelf.base.BaseActivity
 import com.millie.millieshelf.data.api.ServicePool
 import com.millie.millieshelf.databinding.ActivityBestBinding
@@ -16,6 +18,9 @@ class BestActivity : BaseActivity<ActivityBestBinding>(ActivityBestBinding::infl
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         connectAdapter()
+
+        val chipTotal = findViewById<Chip>(R.id.chip_total)
+        chipTotal.isChecked = true
     }
     private fun connectAdapter(){
         val adapter = BestAdapter()

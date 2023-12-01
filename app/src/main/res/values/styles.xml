@@ -4,6 +4,10 @@
         <item name="android:textSize">12dp</item>
     </style>
 
+    <style name="CustomChips" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_bg_state_list</item>
+        <item name="android:textColor">@color/chip_text_state_list</item>
+    </style>
 
 
 </resources>

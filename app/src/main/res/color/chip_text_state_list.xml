@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- selected_chip_text_color.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true"  android:color="@color/White"  />
+    <item android:state_checked="false"  android:color="@color/DarkGrey01" />
+</selector>
